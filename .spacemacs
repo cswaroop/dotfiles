@@ -325,6 +325,12 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (require 'ob-shell)
+  (defadvice org-babel-sh-evaluate (around set-shell activate)
+    "Add header argument :shcmd that determines the shell to be called."
+    (let* ((org-babel-sh-command (or (cdr (assoc :shcmd params)) org-babel-sh-command)))
+      ad-do-it
+      ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
