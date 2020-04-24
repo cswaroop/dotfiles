@@ -4,13 +4,13 @@
 #+DATE:   <2020-04-23 Thu>
 #+TAGS:   emacs notes
 
-Emacs  in Spacemacs avatar is an operating system
-- Documenation and Quick Note taking
-- Code editor
-- Better Operating Shell
-- Beautiful
+Emacs  is a great operating system, lacking only a decent editor!
 
-- https://github.com/howardabrams/dot-files/
+ - Documenation and Quick Note taking
+ - Code editor
+ - Better Operating Shell
+ - https://emacsconf.org/
+ - https://github.com/howardabrams/dot-files/
 
 * Appearances first
 -  Theme :: Sanityinc tomorrow (M-x Package-refresh-contents and select)
@@ -21,8 +21,8 @@ Emacs  in Spacemacs avatar is an operating system
 * Coding
 For Reproduceable research, liteatate programming, literate devops
 - Org-mode with Babel 
+* Tags generation using ctags/gtags
 
-
-
-
+* Snippets
+Use Alt-/ for  auto complete
 
