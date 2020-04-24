@@ -1,0 +1,28 @@
+#+TITLE:  EMACS Notes
+#+AUTHOR: swaroop chalasani
+#+EMAIL:  cswaroop@gmail.com
+#+DATE:   <2020-04-23 Thu>
+#+TAGS:   emacs notes
+
+Emacs  in Spacemacs avatar is an operating system
+- Documenation and Quick Note taking
+- Code editor
+- Better Operating Shell
+- Beautiful
+
+- https://github.com/howardabrams/dot-files/
+
+* Appearances first
+-  Theme :: Sanityinc tomorrow (M-x Package-refresh-contents and select)
+-  Font :: Source Code Pro & Source sans pro. Download from net ( TrueType fonts)
+- Key :: Map CapsLock to Ctrl with AutoHotKey on windows
+* Documentation
+- OrgMode  with Ox backend to export to any format including Latex, Hugo etc.
+* Coding
+For Reproduceable research, liteatate programming, literate devops
+- Org-mode with Babel 
+
+
+
+
+

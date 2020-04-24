@@ -1,0 +1,94 @@
+Courses
+
+Algorithms and Datastructures
+- https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/learn/
+- https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/
+Web Development
+- https://www.udemy.com/course/the-web-developer-bootcamp/learn
+- https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/
+- https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/
+- https://www.udemy.com/course/the-advanced-web-developer-bootcamp/learn/
+- Advanced
+  - https://www.udemy.com/course/the-advanced-web-developer-bootcamp/learn/
+  - https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/learn/
+React
+- https://www.udemy.com/course/react-redux/learn/lecture/12531044
+JavaScript
+- https://www.udemy.com/course/the-complete-javascript-course/learn/
+- https://www.udemy.com/course/node-with-react-fullstack-web-development/learn/
+- https://www.udemy.com/course/understanding-typescript/learn/
+- https://www.udemy.com/course/nodejs-master-class/learn/
+Django
+- https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp/learn
+- https://www.udemy.com/course/the-complete-python-postgresql-developer-course/learn/
+Elixir
+- https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/learn
+Go
+- https://www.udemy.com/course/learn-how-to-code/learn/
+- https://www.udemy.com/course/go-programming-language/learn/
+- https://www.udemy.com/course/go-the-complete-developers-guide-to-golang-4-in-1/learn/
+Rust
+- https://yew.rs/docs/
+MongoDB
+- https://www.udemy.com/course/mongodb-the-complete-developers-guide/learn/
+Ethereum
+- https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/learn/
+
+Domain Name buying: namecheap
+Server provisioning : Digital Ocean/Softlayer
+DevOps
+- https://www.udemy.com/course/learn-devops-infrastructure-automation-with-terraform/learn/
+Hacking & CyberSecurity
+- https://www.udemy.com/course/learn-website-hacking-penetration-testing-from-scratch/learn/
+- https://www.udemy.com/course/learn-social-engineering-from-scratch/learn/
+- https://www.udemy.com/course/real-world-ethical-hacking/learn/
+* Build your Web
+- https://studio.builder.ai/apps
+* Reframe | https://github.com/Day8/re-frame
+
+#+begin_src clojure
+;; domino-1
+(defn delete-button 
+  [item-id]
+  [:div.garbage-bin 
+     :on-click #(re-frame.core/dispatch [:delete-item item-id])])
+
+;; domino-2
+(re-frame.core/reg-event-fx   ;; a part of the re-frame API
+  :delete-item                ;; the kind of event
+  delete-item)
+(defn delete-item                               ;; maybe choose a better name like `delete-item`
+ [coeffects event]                    ;; `coeffects` holds the current state of the world.  
+ (let [item-id (second event)         ;; extract id from event vector
+       db      (:db coeffects)]       ;; extract the current application state
+   {:db  (dissoc-in db [:items item-id])})) ;; effect is "change app state to ..."
+
+;; domino-3
+nil
+
+;; domino-4
+(re-frame.core/reg-sub  ;; part of the re-frame API
+   :query-items         ;; query id  
+   query-fn)            ;; query fn
+(defn query-fn
+  [db v]         ;; db is current app state, v the query vector
+  (:items db))   ;; not much of a materialised view
+
+;; domino-5 | generate Hiccup
+(defn items-view
+  []
+  (let [items  (subscribe [:query-items])]  ;; source items from app state
+    [:div (map item-render @items)]))   ;; assume item-render already written
+
+#+end_src
+
+* SVG
+- https://www.udemy.com/course/learn-svg-animation/learn/
+* NodeJS
+- Loopback
+  https://loopback.io/doc/en/lb4/Getting-started.html  
+* Call-for-Code
+https://developer.ibm.com/callforcode/getstarted/covid-19/
+https://github.com/Call-for-Code/Solution-Starter-Kit-Cooperation-2020
+https://nodered.org/
+https://loopback.io/

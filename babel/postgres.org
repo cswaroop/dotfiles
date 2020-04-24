@@ -1,0 +1,218 @@
+Postgres is a good Document database with SQL support.
+Postgres is a object-relational database with SQL support.
+Postgres is a relational database with SQL and PL/PGSQL support
+
+Books:
+- PostgreSQL 11 Server Side Programming Quick Start Guide
+- Mastering PostgreSQL 12
+
+
+* Postgres as NoSQL JSON store for Multitenant SAAS
+JSONB is data type makes Postgres as suitable mongodb replacement.
+
+https://docs.mongodb.com/manual/introduction/
+https://www.postgresql.org/docs/12/datatype-json.html
+
+Universal Schema required. 
+Salesforce Universal schema as relational http://www.developerforce.com/media/ForcedotcomBookLibrary/Force.com_Multitenancy_WP_101508.pdf
+
+
+#+begin_src sql
+-- CREATE EXTENSION 'uuid-ossp';
+
+CREATE TABLE org (
+  id SERIAL PRIMARY KEY,
+  name text
+);
+
+
+CREATE TABLE docs -- node/event
+(
+ --id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
+ id SERIAL PRIMARY KEY,
+ org_id int DEFAULT 0,
+ created_by int DEFAULT 0,
+ created_at timestamptz DEFAULT now(),
+ doc jsonb
+);
+
+CREATE INDEX idx_docs_doc ON docs USING GIN (doc); -- Serves Full Text Search and other JSONB operators
+
+CREATE TABLE doc_clobs
+(
+  id SERIAL PRIMARY KEY,
+  doc_id int,
+  clob bytea
+);
+
+CREATE TABLE IF NOT EXISTS tags(
+  id text,
+  name text NOT NULL,
+  child_of text,
+  PRIMARY KEY (id),
+  FOREIGN KEY (child_of) REFERENCES tags(id),
+  UNIQUE(name, child_of)
+);
+
+CREATE TABLE IF NOT EXISTS doc_tags (
+id int GENERATED ALWAYS AS IDENTITY,
+doc_id int,
+tag_id text,
+PRIMARY KEY (id),
+UNIQUE( doc_id, tag_id),
+FOREIGN KEY ( doc_id ) REFERENCES docs(id) ON DELETE CASCADE,
+FOREIGN KEY ( tag_id ) REFERENCES tags(id ) ON DELETE CASCADE
+);
+
+CREATE TABLE doc_rltps - relationships as edges
+(
+  id int GENERATED ALWAYS AS IDENTITY,  
+  source_id int REFERENCES docs(id),
+  sink_id int REFERENCES docs(id),
+  rltp_type text DEFAULT 'refers',
+  PRIMARY KEY (id),
+  UNIQUE( source_id, sink_id)
+);
+
+CREATE INDEX idx_src_sink ON doc_rltps USING (source_id, sink_id);
+
+
+CREATE TABLE events (
+  event_id bigint,
+  event_type text,
+  event_public boolean,
+  doc_id bigint,
+  payload jsonb,
+  repo jsonb, 
+  actor jsonb,
+  org jsonb,
+  created_at timestamp
+) PARTITION BY RANGE (created_at);
+
+#+end_src
+** Data Modeling
+*** Embedded Document Model
+     While modeling everything embedded you don't need rltps table
+*** Normalized Document Model
+     You model references in rltp table
+** CRUD operations
+https://www.enterprisedb.com/blog/crud-json-postgresql
+
+Create
+
+#+begin_src 
+INSERT INTO docs(doc_type,doc) VALUES ('users',$${
+  user_id: "bcd001",
+  age: 45,
+  status: "A" 
+}$$) RETURNING id;
+
+#+end_src
+
+Read
+
+#+begin_src 
+SELECT doc from docs WHERE doc_type='users';
+
+#+end_src
+
+Update
+Update of JSOB is nothing but INSERT of modified data.
+
+https://wiki.postgresql.org/wiki/What%27s_new_in_PostgreSQL_9.5#JSONB-modifying_operators_and_functions
+
+#+begin_src sql
+UPDATE docs 
+SET doc = replace(doc::TEXT,'"name":','"my-other-name":')::jsonb 
+WHERE doc->>'age'::int >= 45;
+
+UPDATE objects
+SET body = jsonb_set(body, '{name}', '"Mary"', true)
+WHERE id = 1; 
+
+UPDATE airports
+SET airport =
+
+JSONB_SET(
+
+  airport,
+
+  '{airport_keywords}',
+  (WITH kjfk_keys AS (
+
+    SELECT JSONB_ARRAY_ELEMENTS(airport -> 'airport_keywords') keywords
+
+    FROM airports
+
+    WHERE airport ->> 'ident' = 'KJFK')
+  SELECT JSONB_AGG(keywords)
+
+  FROM kjfk_keys
+
+  WHERE keywords::TEXT != '"Idlewild"'))
+WHERE airport ->> 'ident' = 'KJFK';
+
+#+end_src
+
+** Bulk create
+COPY
+
+** Full Text Search
+https://www.postgresql.org/docs/current/functions-textsearch.html
+
+#+begin_src sql
+CREATE INDEX ON table
+   USING gin ( to_tsvector('english',jsondata) );
+#+end_src
+
+** Aggregate
+materialized views?
+
+** Change Streams
+Replication slots
+
+** JSON Schema Support
+JSON Schema is a standard for describing JSON documents.  Postgres has no built-in support for enforcement of this. Following extension might be of help
+https://github.com/gavinwahl/postgres-json-schema
+
+** Multitenancy
+   Universal schema can be created in multiple schemas.
+** Denormalized Views for Browse/List
+   #+begin_src sql
+   CREATE MATERIALIZED VIEW table1_d AS SELECT doc->'field-1', doc->'field-2' FROM doc; -- WITH NO DATA
+   REFRESH MATERIALIZED VIEW CONCURRENTLY domain_table1;
+   #+end_src
+
+   For Relaltime data analysis see Postgres as Realtime Analytics Database
+* Postgres as Relational Database for Multitenant SAAS
+Table paritioning + sharding + tenant isolation
+https://www.citusdata.com/
+
+* Postgres as Realtime Analytics Database
+http://docs.citusdata.com/en/v9.2/use_cases/realtime_analytics.html
+
+Lambda and Kappa architectures
+
+#+begin_src  sql
+CREATE TABLE http_request (
+  site_id INT,
+  ingest_time TIMESTAMPTZ DEFAULT now(),
+  url TEXT,
+  request_country TEXT,
+  ip_address TEXT,
+  status_code INT,
+  response_time_msec INT
+);
+CREATE TABLE http_request_1min (
+  site_id INT,
+  ingest_time TIMESTAMPTZ, -- which minute this row represents
+
+  error_count INT,
+  success_count INT,
+  request_count INT,
+  average_response_time_msec INT,
+  CHECK (request_count = error_count + success_count),
+  CHECK (ingest_time = date_trunc('minute', ingest_time))
+);
+CREATE INDEX http_request_1min_idx ON http_request_1min (site_id, ingest_time);
+#+end_src
