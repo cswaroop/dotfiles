@@ -11,7 +11,10 @@ Emacs  is a great operating system, lacking only a decent editor!
  - Better Operating Shell
  - https://emacsconf.org/
  - https://github.com/howardabrams/dot-files/
-
+* Spacemacs
+https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org
+** Layers
+   https://gitahub.com/syl20bnr/spacemacs/tree/master/layers
 * Appearances first
 -  Theme :: Sanityinc tomorrow (M-x Package-refresh-contents and select)
 -  Font :: Source Code Pro & Source sans pro. Download from net ( TrueType fonts)
@@ -25,4 +28,13 @@ For Reproduceable research, liteatate programming, literate devops
 
 * Snippets
 Use Alt-/ for  auto complete
+* search engine
+https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bweb-services/search-engine
 
+Evil	Holy	Command
+SPC a /	C-c /	Summon a Helm buffer to select any engine
+
+* ctags
+scoop install ctags
+* Lisp State
+https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#lisp-key-bindings* Lisp State
