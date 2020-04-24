@@ -40,6 +40,7 @@ scoop install ctags
 https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#lisp-key-bindings* Lisp State
 * Org Babel
 ** Running Babashka on windows
+https://lists.gnu.org/archive/html/emacs-orgmode/2010-12/msg00446.html
 scoop install babashka
 (setq org-babel-sh-command "cmd /k")
 
