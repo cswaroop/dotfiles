@@ -11,6 +11,7 @@ Emacs  is a great operating system, lacking only a decent editor!
  - Better Operating Shell
  - https://emacsconf.org/
  - https://github.com/howardabrams/dot-files/
+- https://github.com/practicalli/spacemacs
 * Spacemacs
 https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org
 ** Layers
@@ -27,7 +28,7 @@ For Reproduceable research, liteatate programming, literate devops
 * Tags generation using ctags/gtags
 
 * Snippets
-Use Alt-/ for  auto complete
+  Use Alt-/ for  auto complete
 * search engine
 https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bweb-services/search-engine
 
@@ -36,8 +37,8 @@ SPC a /	C-c /	Summon a Helm buffer to select any engine
 
 * ctags
 scoop install ctags
-* Lisp State
-https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#lisp-key-bindings* Lisp State
+* Lisp State for LISP/CLOJURE editing
+https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#lisp-key-bindings
 * Org Babel
 ** Running Babashka on windows
 https://lists.gnu.org/archive/html/emacs-orgmode/2010-12/msg00446.html

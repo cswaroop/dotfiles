@@ -1,6 +1,7 @@
-* Learning
+#+TITLE: Clojure
   Clojure runs on JVMs (OpenJDK/GraalVM)
   ClojureScript runs on NodeJS/Browser
+* Learning
 - https://clojure.org/api/cheatsheet
 - https://clojure.org/reference
 - https://cljdoc.org/
@@ -11,8 +12,11 @@
 - https://purelyfunctional.tv
 - https://www.jacekschae.com
 
-Books | https://github.com/clojurians-org/clojure-ebook-2
-
+Books 
+- https://www.braveclojure.com/
+- http://funcool.github.io/clojurescript-unraveled
+- https://practicalli.github.io/
+- https://purelyfunctional.tv/
 - Lisp 
   https://github.com/cswaroop/lisp-ebook
 - Clojure Cookbook
