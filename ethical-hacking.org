@@ -1,5 +1,0 @@
-#+TITLE:  Ethical Hacking
-https://www.udemy.com/course/learn-ethical-hacking-from-scratch/learn
-https://zsecurity.org/
-https://zsecurity.org/download-custom-kali/
-

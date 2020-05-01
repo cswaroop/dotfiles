@@ -1,7 +1,6 @@
 * Tasks
 ** TODO 
-   [2020-04-23 Thu]
-   [[file:d:/MyProjects/emacs.org]]
-** TODO  sometask
-   [2020-04-23 Thu]
-   [[file:d:/MyProjects/emacs.org]]
+   [2020-04-30 Thu]
+   [[file:~/.spacemacs::("c" "Cooking" entry (file+datetree "d:/MyProjects/cooking/log.org")]]
+** TODO 
+   [2020-04-30 Thu]

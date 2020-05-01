@@ -1,2 +1,0 @@
-https://www.spacemacs.org/layers/+tools/finance/README.html
-https://www.ledger-cli.org/

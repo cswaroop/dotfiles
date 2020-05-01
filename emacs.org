@@ -4,7 +4,9 @@
 #+DATE:   <2020-04-23 Thu>
 #+TAGS:   emacs notes
 
-Emacs  is a great operating system, lacking only a decent editor!
+Emacs  is a great operating system, lacking only a decent editor!  EVIL mode
+fixes it. Hence trying out spacemacs with EVIL mode. 
+
 
  - Documenation and Quick Note taking
  - Code editor
@@ -12,6 +14,15 @@ Emacs  is a great operating system, lacking only a decent editor!
  - https://emacsconf.org/
  - https://github.com/howardabrams/dot-files/
 - https://github.com/practicalli/spacemacs
+
+
+* Dot files
+- https://www.youtube.com/watch?v=HKF41ivkBb0
+  https://github.com/TheBB/spacemacs-layers/blob/master/init.el
+- Howard Abrams
+https://www.youtube.com/channel/UCVHICXXtKG7rZgtC5xonNdQ
+https://github.com/howardabrams/dot-files
+
 * Spacemacs
 https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org
 ** Layers
@@ -26,7 +37,6 @@ https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org
 For Reproduceable research, liteatate programming, literate devops
 - Org-mode with Babel 
 * Tags generation using ctags/gtags
-
 * Snippets
   Use Alt-/ for  auto complete
 * search engine
@@ -77,4 +87,24 @@ d:\MyProjects\dotfiles>bb -f babashka\pst.clj
 
 d:\MyProjects\dotfiles>More? 
 #+end_src
+* Eshell
+- https://www.youtube.com/watch?v=RhYNu6i_uY4
+* Magit 
+* Git interface for emacs
+https://www.youtube.com/watch?v=vQO7F2Q9DwA
+* RegExps
+https://www.youtube.com/watch?v=6pqhDjQKWng
+* Learn VI bindings for using EVIL mode
+http://www.youtube.com/watch?v=wlR5gYd6um0
 
+Ctrl-Z to switch between emacs and vi mode
+  To toggle the hybrid style on and off use SPC t E h and M-m t E h. When off the vim style is enabled.
+http://derekwyatt.org/vim/tutorials/
+
+
+* TRAMP
+For remote editing files over ssh
+http://wikemacs.org/wiki/TRAMP
+#+begin_src 
+scoop install putty
+#+end_src

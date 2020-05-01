@@ -1,0 +1,7 @@
+run this in emacs shell
+#+begin_src emacs-lisp
+(setenv "PATH"
+        (concat
+         "/usr/local/bin:/usr/local/sbin:"
+         (getenv "PATH")))
+#+end_src

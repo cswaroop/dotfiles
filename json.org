@@ -1,5 +1,0 @@
-
-#+begin_src json
-{
-}
-#+end_src
