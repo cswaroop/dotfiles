@@ -14,7 +14,8 @@ fixes it. Hence trying out spacemacs with EVIL mode.
  - https://emacsconf.org/
  - https://github.com/howardabrams/dot-files/
 - https://github.com/practicalli/spacemacs
-
+Zamansky Blog
+https://cestlaz.github.io/stories/emacs/
 
 * Dot files
 - https://www.youtube.com/watch?v=HKF41ivkBb0

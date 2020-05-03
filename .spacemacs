@@ -8,12 +8,7 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
-     html
-     ;;evil-mc
-     ;;(multiple-cursors :variables multiple-cursors-backend 'evil-m)
-     typography
-     windows-scripts
-     helm
+     ;; maintain alphabetical order
      (auto-completion
       :variables
       auto-completion-enable-snippets-in-popup t
@@ -22,40 +17,47 @@
       auto-completion-private-snippets-directory "~/snippets/"
       auto-completion-enable-help-tooltip 'manual
       :disabled-for org erc)
-     ;; better-defaults
+     colors
+     command-log
+     csv
+     (clojure :variables clojure-enable-fancify-symbols t)
+     docker
      emacs-lisp
+     emoji
+     ;;evil-mc
+     finance
      git
+     github
+     go
+     helm
+     html
+     imenu-list
      markdown
+     ;;(multiple-cursors :variables multiple-cursors-backend 'evil-m)
      (org :variables
           org-enable-org-journal-support t
           org-journal-dir "D:/MyProjects/personal"
           org-enable-hugo-support t)
+     (ranger :variables
+             ranger-show-preview t
+             ranger-show-hidden t
+             ranger-cleanup-eagerly t
+             ranger-cleanup-on-disable t
+             ranger-ignored-extensions '("mkv" "flv" "iso" "mp4"))
      (shell :variables
-             shell-default-height 30
-             shell-default-position 'bottom)
+            shell-default-height 30
+            shell-default-position 'bottom)
      (spell-checking :variables spell-checking-enable-by-default nil)
      (syntax-checking :variables syntax-checking-enable-by-default nil)
      (semantic :disabled-for emacs-lisp)
-     yaml
-     csv
-     ;;javascript
-     version-control
-     finance
-     search-engine
-     command-log
-     docker
-     imenu-list
-     colors
-     emoji
-     (clojure :variables clojure-enable-fancify-symbols t)
      (sql :variables sql-capitalize-keywords t)
-     (ranger :variables
-             ranger-show-preview t
-            ranger-show-hidden t
-             ranger-cleanup-eagerly t
-             ranger-cleanup-on-disable t
-             ranger-ignored-extensions '("mkv" "flv" "iso" "mp4")))
-
+     search-engine
+     ;;solidity
+     typography
+     version-control
+     windows-scripts
+     yaml
+     )
    dotspacemacs-additional-packages '(
                                       restclient
                                       ob-restclient
@@ -65,7 +67,8 @@
                                       color-theme-sanityinc-tomorrow
                                       demo-it
                                       multiple-cursors
-                                      org-projectile
+                                      floobits
+                                      ;;org-projectile
                                       powerline)
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
@@ -90,7 +93,7 @@
                          sanityinc-tomorrow-day
                          sanityinc-tomorrow-night
                          sanityinc-tomorrow-bright
-                         sanityinc-tomorrow-eighties)
+                         sanityinc-tomorrow-eighties )
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Sans Pro"
                                :size 13
@@ -228,13 +231,13 @@
    (quote
     ("732b807b0543855541743429c9979ebfb363e27ec91e82f463c91e68c772f6e3" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" "983eb22dae24cab2ce86ac26700accbf615a3f41fef164085d829fe0bcd3c236" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "5c2392170fffe8da6d1794099b5a42fae4100acb637d896fec3066fea81d3eb9" default)))
  '(evil-want-Y-yank-to-eol nil)
- '(fci-rule-color "#515151")
+ '(fci-rule-color "#515151" t)
  '(flycheck-color-mode-line-face-to-color (quote mode-line-buffer-id))
  '(frame-background-mode (quote dark))
  '(helm-completion-style (quote emacs))
  '(package-selected-packages
    (quote
-    (web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data material-theme monokai-pro-theme yaml-mode web-beautify typo stickyfunc-enhance srefactor sql-indent livid-mode skewer-mode simple-httpd js2-refactor js2-mode js-doc csv-mode company-quickhelp coffee-mode ranger flyspell-correct-helm flyspell-correct auto-dictionary demo-it color-theme-sanityinc-tomorrow emoji-cheat-sheet-plus company-emoji leuven-theme clojure-snippets clj-refactor inflections multiple-cursors paredit cider-eval-sexp-fu cider sesman queue parseedn clojure-mode parseclj a rainbow-mode rainbow-identifiers color-identifiers-mode imenu-list dockerfile-mode docker tablist json-mode docker-tramp json-snatcher json-reformat command-log-mode engine-mode helm-company helm-c-yasnippet fuzzy company-statistics company auto-yasnippet ac-ispell auto-complete yasnippet ob-clojurescript ledger-mode flycheck-ledger ob-restclient restclient restclient-helm restclient xterm-color smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download multi-term mmm-mode markdown-toc markdown-mode magit-gitflow magit-popup htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip pos-tip flycheck evil-magit magit git-commit with-editor transient eshell-z eshell-prompt-extras esh-help diff-hl powershell ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
+    (magit-gh-pulls github-search github-clone github-browse-file gist gh marshal logito pcache ht floobits go-guru go-eldoc company-go go-mode avy anzu iedit evil helm helm-core projectile dash web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data material-theme monokai-pro-theme yaml-mode web-beautify typo stickyfunc-enhance srefactor sql-indent livid-mode skewer-mode simple-httpd js2-refactor js2-mode js-doc csv-mode company-quickhelp coffee-mode ranger flyspell-correct-helm flyspell-correct auto-dictionary demo-it color-theme-sanityinc-tomorrow emoji-cheat-sheet-plus company-emoji leuven-theme clojure-snippets clj-refactor inflections multiple-cursors paredit cider-eval-sexp-fu cider sesman queue parseedn clojure-mode parseclj a rainbow-mode rainbow-identifiers color-identifiers-mode imenu-list dockerfile-mode docker tablist json-mode docker-tramp json-snatcher json-reformat command-log-mode engine-mode helm-company helm-c-yasnippet fuzzy company-statistics company auto-yasnippet ac-ispell auto-complete yasnippet ob-clojurescript ledger-mode flycheck-ledger ob-restclient restclient restclient-helm restclient xterm-color smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download multi-term mmm-mode markdown-toc markdown-mode magit-gitflow magit-popup htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip pos-tip flycheck evil-magit magit git-commit with-editor transient eshell-z eshell-prompt-extras esh-help diff-hl powershell ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
