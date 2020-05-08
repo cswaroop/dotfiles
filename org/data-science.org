@@ -1,0 +1,20 @@
+* Python for Data science and Machine Learning
+NumPy
+SciKit
+
+- python
+- numpy
+- pandas
+- matplotlib for viz
+- regression, nlp
+- bigdata
+- tensorflow
+- capstone data projects
+
+python with anacoda
+jupyter
+
+
+anacoda = all-in-one
+jupyter is ide
+

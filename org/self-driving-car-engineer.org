@@ -1,0 +1,10 @@
+#+TITLE: Self Driving Car Engineer
+https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/Self-Driving+Car+Nanodegree+Syllabus.pdf
+Course 1: Introduction 2
+Course 2: Computer Vision 2
+Course 3: Deep Learning 3
+Course 4: Sensor Fusion 4
+Course 5: Localization 5
+Course 6: Path Planning 5
+Course 7: Control 6
+Course 8: System Integration 

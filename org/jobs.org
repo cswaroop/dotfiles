@@ -3,7 +3,6 @@
   The client is an is an ed-tech company, engaged in the K-12 education space learn with focus on diagnostic assessment and personalized learning. The clients mission is is to build the 'Science of Learning' that would provide teachers a repository of data and techniques that they can use to help children learn better - a big improvement over today's situation.
   https://www.linkedin.com/jobs/view/1812517490/?alternateChannel=smljob
 
-
 - Distinguished Software Engineer - Solution Architect - Walmart Labs
   https://www.linkedin.com/jobs/view/1817104012/?alternateChannel=paview
 
@@ -22,3 +21,8 @@ https://www.linkedin.com/jobs/view/1799256729/?refId=6c3cb492-a3f6-459c-bee5-4f6
 
  https://www.linkedin.com/jobs/view/1807094945/?alternateChannel=paview
 
+:u
+:u
+:it:
+:fr:
+:de:

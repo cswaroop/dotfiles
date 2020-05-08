@@ -1,0 +1,452 @@
+#+TITLE:  AWS Cloud Developer
+https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/Cloud+Developer+Nanodegree+program+Syllabus.pdf
+* Course 1: Cloud Fundamentals
+* Course 2: Full Stack Apps on AWS
+* Course 3: Monolith to Microservices at Scale
+* Course 4: Develop & Deploy Serverless App
+*
+Need Help? Speak with an Advisor: www.udacity.com/advisor
+Cloud Developer
+NANODEGREE PROGRAM SYLLABUS
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 2
+Overview
+Start by learning the fundamentals of cloud development and deployment with AWS. Then, build different
+apps leveraging microservices, Kubernetes clusters, and serverless application technology.
+Cloud Developers design and develop secure cloud applications, services, and products. This can include
+everything from back-end, front-end, web application, full-stack, and cloud application deployment. You
+will develop cloud-native applications or migrate legacy applications to cloud. This role is a great fit for
+traditional software engineers and developers who want to build applications on cloud technologies.
+In the program, you will:
+• Build a static website using AWS
+• Develop and deploy cloud-native full-stack applications on AWS
+• Refactor monolithic apps to microservices, and scale using Kubernetes
+• Develop and deploy a serverless application using AWS Lambda
+Prerequisites:
+Intermediate
+Javascript, Linux
+Command Line,
+HTML/CSS
+Flexible Learning:
+Self-paced, so
+you can learn on
+the schedule that
+works best for you
+Estimated Time:
+4 Months at
+10 hours / week
+Need Help?
+udacity.com/advisor
+Discuss this program
+with an enrollment
+advisor.
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 3
+Course 1: Cloud Fundamentals
+The cloud has become a key enabler for innovation with beneficial features like high availability, unlimited
+capacity, and on-demand scalability and elasticity. Learn the fundamentals of cloud computing while being
+introduced to compute power, security, storage, networking, messaging, and management services in the
+cloud. While learning the fundamentals, you will explore tools and services offered by Amazon Web Services
+(AWS) through interactive hands-on exercises. By the end of the course, you will have deployed your first
+website to AWS.
+LEARNING OUTCOMES
+LESSON ONE Cloud Overview
+• Learn the basics of cloud computing including cloud
+ deployment models, benefits, and popular options
+• Explore services provided by Amazon Web Services(AWS)
+LESSON TWO Foundational and
+Compute Services
+• Learn why we need servers, compute power, and security
+• Explore AWS compute services like Elastic Cloud Compute
+ (EC2), Virtual Private Cloud (VPC), Lambda for serverless
+ framework, and Elastic Beanstalk in action
+• Launch a secure EC2 instance, create and execute a
+ Lambda, and deploy an application to Elastic Beanstalk
+LESSON THREE Storage and Content
+Delivery
+• Learn why we need storage and content delivery in the
+ cloud
+• Learn storage services like S3, DynamoDB, Relational
+ Database Service (RDS), and CloudFront
+• Create a DynamoDB table, launch a MySQL database
+ instance, and create a CloudFront distribution
+Course Project
+Deploy Static Website
+on AWS
+The cloud is perfect for hosting static websites that only include
+HTML, CSS, and JavaScript files that require no server-side
+processing. In this project, you will deploy a static website to AWS.
+First, you will create a S3 bucket, configure the bucket for website
+hosting, and secure it using IAM policies. Next, you will upload the
+website files to your bucket and speed up content delivery using
+AWS’s content distribution network service, CloudFront. Lastly, you
+will access your website in a browser using the unique S3 endpoint.
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 4
+LEARNING OUTCOMES
+LESSON FOUR Security
+• Learn the importance of security in the cloud
+• See Identity & Access Management (IAM) in action
+• Secure applications using IAM users, groups, and policies
+LESSON FIVE Networking &
+Elasticity
+• Learn the basics of networking and elasticity in the cloud
+• Examine services like Route 53, EC2 Auto Scaling, and
+ Elastic Load Balancing
+• Add an auto scaling policy to your EC2 instance
+LESSON SIX Messaging &
+Containers
+• Learn the basics of messaging and containers in the cloud
+• Explore services like Simple Notification Service (SNS),
+ Simple Queue Service (SQS), and Elastic Container Service
+ (ECS)
+• Create cloud notifications using SNS
+LESSON SEVEN AWS Management
+• Learn why we need logging, auditing, and resource
+ management in the cloud
+• Understand services like Cloud Watch, Cloud Trail, Cloud
+ Formation, and the AWS Command Line Interface (CLI)
+• Explore the CLI
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 5
+Course 2: Full Stack Apps on AWS
+LEARNING OUTCOMES
+LESSON ONE Cloud Basics
+• Learn key terminology and building blocks of a cloud
+ system
+• Understand design paradigm of modern cloud applications
+LESSON TWO Set Up Best Practices
+• Implement a process so you write quality code, working
+ alone or on teams.
+• Learn unit and integration testing, a better way to git, and
+ how to use packaged dependencies.
+LESSON THREE Storing Data in the
+Cloud
+• Set up and start using a cloud-based relational database for
+ storing user data using AWS RDS
+• Implement a filestore for media like images using AWS S3
+Explore the foundational concepts of designing and deploying scalable, extendable, and maintainable full
+stack applications using modern cloud architecture. All concepts are covered at a fundamental level and
+motivated with practical, real world programming exercises. Through the course, you’ll have built and
+deployed a multi-service cloud stack. By the end of this course, you’ll understand key design decisions and
+useful tools to maintain your application.
+Course Project
+Udagram: Your Own
+Instagram on AWS
+In this project, you will develop a cloud-based application for
+uploading, listing, and filtering images. You will use Node.js
+Express, a popular javascript framework for networked application
+development to develop this application. You will implement a REST
+API to issue commands using HTTP, store data in Amazon Web
+Services Relational Data Service (RDS) and S3, extend the codebase
+with secure authentication signon features, and deploy to Amazon
+Web Services Elastic Beanstalk. These are the hard skills you’ll need
+in any Cloud developer role.
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 6
+LEARNING OUTCOMES
+LESSON FOUR Deploying to the
+Cloud
+• Consume cloud data services (database and filestore)
+ within your server application
+• Deploy your application using AWS Elastic Beanstalk.
+LESSON FIVE User Authentication
+and Security
+• Learn common mistakes and modern techniques for
+ dealing with security and new set of cloud authentication
+ challenges
+LESSON SIX Scaling and Fixing
+• Cloud systems need to be maintained as dependencies are
+ updated and there is more demand for your service.
+ Explore tools and process to minimize growing pains
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 7
+Course 3: Monolith to Microservices at Scale
+Microservices are becoming the default mode of developing and deploying applications at scale. The
+microservices architecture makes it easier to scale an application to a large system and is a great
+enabler for continuous integration and delivery. Microservices architecture allows independent scaling,
+independent releases and deployments  and independent development so that each service has its own
+codebase. In this course we will cover the best practices on how to develop and deploy microservices.
+You will learn topics such as different microservice architecture patterns, independent scaling, resiliency,
+securing microservices, and best practices for monitoring and logging. By the end of this course, you
+should be able to design and build an application using a microservice architecture.
+LEARNING OUTCOMES
+LESSON ONE
+Microservices Design
+Principles and Best
+Practices
+• Learn different microservices architecture designs and how
+ to divide an application into microservices
+LESSON TWO Containers Using
+Docker
+• Build and run your first container image using Docker
+• Debug container and store these images using container
+ registry
+LESSON THREE
+Automating
+the Application
+Development
+Lifecycle
+• Understand CI/CD benefits and use Travis to build CI/CD
+ pipeline
+• Integrate github and CI/CD and automate testing with CI
+Course Project
+Refactor Monolith to
+Microservices and Deploy
+In this project, you will take an existing application named Udagram
+and refactor it into a microservice architecture with lean services.
+You will build out a CI/CD process that automatically builds and
+deploys Docker images to a Kubernetes cluster. The Kubernetes
+cluster will be configured to help solve common challenges related to
+scale and security.
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 8
+LEARNING OUTCOMES
+LESSON FOUR Orchestration
+with Kubernetes
+• Learn the fundamentals of Kubernetes
+• Configure and launch an auto-scaling, self-healing
+ Kubernetes cluster
+• Deploy your microservices using Kubernetes cluster
+LESSON FIVE
+Best Practices and
+Design Patterns
+for Kubernetes in
+Production
+• Implement service registration and discovery
+• Configure scaling and self-healing
+• Secure microservices
+• Implement monitoring and logging for microservices
+ deployment
+• Improve resilience and availability into cloud applications
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 9
+Course 4: Develop & Deploy Serverless App
+LEARNING OUTCOMES
+LESSON ONE Introduction to
+Serverless
+• Learn the main components of a serverless application
+• Implement simple application using Function as a Service
+ (FaaS)
+LESSON TWO REST APIs for
+Serverless
+• Build a simple REST API using serverless technologies such
+ as API Gateway, AWS Lambda, and AWS DynamoDB and use
+ it in React based web application
+Course Project
+Serverless Application
+In this project you will develop an Instagram-like serverless service
+for uploading, listing, and filtering images. You will begin with
+building serverless REST APIs using API Gateway and AWS Lambda, a
+stack of serverless technologies on AWS. You will then implement an
+API to interact with this application, store data in AWS DynamoDB,
+S3, and Elasticsearch, secure your application with authentication,
+and deploy to Amazon Web Services using a Serverless framework.
+Serverless technologies have become very popular recently because they can increase the speed of
+development and drastically reduce the cost of running a cloud infrastructure. This course combines the
+theory of using serverless technologies with the practice of developing a complex serverless application.
+You will learn advanced serverless features such as implementing WebSockets and stream processing,
+and learn about serverless best practices throughout the course.
+Course Project
+Capstone Project
+The purpose of the cloud development capstone project is to give
+you a chance to combine what you’ve learned throughout the
+program. This project will be an important part of your portfolio that
+will help you achieve your cloud development-related career goals.
+In the capstone project, each project is unique to the student. You’ll
+build an application on AWS based on predefined criteria. Students
+will define the scope of the project, come up feature list and decide
+which AWS services to use to meet availability and performance
+criteria.
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 10
+LESSON THREE Serverless
+Framework
+• Build, package and deploy serverless applications using
+ Serverless framework
+• Implement additional features using advanced DynamoDB
+ features
+LESSON FOUR Events Processing
+with Serverless
+• Improve our application using FaaS ability to execute
+ custom logic when particular events occur in the system
+• Add WebSockets support and full-text search to your app
+LESSON FIVE Implementing
+Authentication
+• Implement authentication in a serverless application using
+ popular serverless service Auth0 in your app API and client
+ application.
+• Learn to store secrets for our serverless application using
+ AWS Secrets Manager
+LESSON SIX Serverless Best
+Practices
+• Learn how to test serverless applications, minimize risk of
+ vendor lock-in, create multiple stages of our API and
+ improve security and observability of our application
+LESSON SEVEN Serverless GraphQL
+• Implement Udagram application using another serverless
+ component called AWS AppSync that allows to easily create
+ GraphQL API for cloud resources without writing much
+ backend code.
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 11
+Our Classroom Experience
+REAL-WORLD PROJECTS
+Build your skills through industry-relevant projects. Get
+personalized feedback from our network of 900+ project
+reviewers. Our simple interface makes it easy to submit
+your projects as often as you need and receive unlimited
+feedback on your work.
+KNOWLEDGE
+Find answers to your questions with Knowledge, our
+proprietary wiki. Search questions asked by other students,
+connect with technical mentors, and discover in real-time
+how to solve the challenges that you encounter.
+STUDENT HUB
+Leverage the power of community through a simple, yet
+powerful chat interface built within the classroom. Use
+Student Hub to connect with your fellow students in your
+Executive Program.
+WORKSPACES
+See your code in action. Check the output and quality of
+your code by running them on workspaces that are a part
+of our classroom.
+QUIZZES
+Check your understanding of concepts learned in the
+program by answering simple and auto-graded quizzes.
+Easily go back to the lessons to brush up on concepts
+anytime you get an answer wrong.
+CUSTOM STUDY PLANS
+Preschedule your study times and save them to your
+personal calendar to create a custom study plan. Program
+regular reminders to keep track of your progress toward
+your goals and completion of your program.
+PROGRESS TRACKER
+Stay on track to complete your Nanodegree program with
+useful milestone reminders.
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 12
+Learn with the Best
+Kesha Williams
+INSTRUCTOR
+Kesha has over 20 years experience in
+software development and is a software
+engineering manager at Chick-fil-A,
+routinely leading innovation teams in
+proving out the use of cloud services to
+solve complex business problems. She
+was recently named an Alexa Champion
+by Amazon.
+Gabriel Ruttner
+INS TRUC TOR
+Gabe is the CTO at Ursa & Tech Advisor for
+Start-Ups. Gabe has expertise in building
+cloud-based machine learning and natural
+language processing services at early
+stage tech companies. He holds technical
+degrees from Cornell University and Stony
+Brook University.
+Justin Lee
+INSTRUCTOR
+Justin is an engineer specializing in designing modern data platforms and scalable
+systems. He has been a consultant for Fortune 500 companies and has traveled the
+world to work with his clients. He provides
+mentorship and interviews developers
+through Codementor and has a BS in Computer Science from UCLA.
+Ivan Mushketyk
+INSTRUCTOR
+ Ivan formerly worked at Amazon Web
+Services (AWS), where he built features for
+cloud services such as CloudWatch, and
+his professional experience includes cloud,
+networking and blockchain. Ivan is also a
+prolific Open Source contributor, blogger,
+and online instructor.
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 13
+All Our Nanodegree Programs Include:
+EXPERIENCED PROJECT REVIEWERS
+REVIEWER SERVICES
+• Personalized feedback & line by line code reviews
+• 1600+ Reviewers with a 4.85/5 average rating
+• 3 hour average project review turnaround time
+• Unlimited submissions and feedback loops
+• Practical tips and industry best practices
+• Additional suggested resources to improve
+TECHNICAL MENTOR SUPPORT
+MENTORSHIP SERVICES
+• Questions answered quickly by our team of
+ technical mentors
+• 1000+ Mentors with a 4.7/5 average rating
+• Support for all your technical questions
+PERSONAL CAREER SERVICES
+CAREER COACHING
+• Personal assistance in your job search
+• Monthly 1-on-1 calls
+• Personalized feedback and career guidance
+• Interview preparation
+• Resume services
+• Github portfolio review
+• LinkedIn profile optimization
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 14
+Frequently Asked Questions
+PROGRAM OVERVIEW
+WHY SHOULD I ENROLL?
+The cloud developer field is expected to continue growing rapidly over the
+next several years, and there’s huge demand for cloud developers across
+industries.
+Udacity has collaborated with industry professionals to offer a world-class
+learning experience so you can advance your software development career.
+You will get hands-on experience building and deploying full stack apps,
+converting monolith to microservices and developing serverless app on the
+cloud, and more. Udacity provides high-quality support as you master indemand skills that will qualify you for high-value jobs in cloud computing field
+and help you land a job you love.
+By the end of the Nanodegree program, you will have an impressive portfolio
+of real-world projects and valuable hands-on experience.
+WHAT JOBS WILL THIS PROGRAM PREPARE ME FOR?
+This program is designed to prepare students to become Cloud Developers.
+This includes job titles such as cloud developer, full stack developer, cloud
+engineers, and others. Cloud development skills are also helpful for adjacent
+software engineering roles.
+HOW DO I KNOW IF THIS PROGRAM IS RIGHT FOR ME?
+This Nanodegree program offers an ideal path for experienced software/web
+developers to advance their career. If you enjoy building web applications
+and want to learn to learn how to build them on cloud, this is a great way to
+get hands-on practice with a variety of cloud computing principles and best
+practices.
+The prerequisites for this program include proficiency in JavaScript and Web
+development (HTML, CSS). You should also be comfortable with linux basic
+commands and object-oriented programming concepts.
+ENROLLMENT AND ADMISSION
+DO I NEED TO APPLY? WHAT ARE THE ADMISSION CRITERIA?
+There is no application. This Nanodegree program accepts everyone,
+regardless of experience and specific background.
+WHAT ARE THE PREREQUISITES FOR ENROLLMENT?
+To optimize your success in this program, we’ve created a list of prerequisites
+and recommendations to help you prepare for the curriculum. To enroll, you
+should have experience in the following:
+Need Help? Speak with an Advisor: www.udacity.com/advisor Cloud Developer | 15
+FAQs Continued
+• Intermediate programming skills in Javascript
+You should also have some familiarity with:
+• Web development (HTML, CSS)
+• Object Oriented Programming
+• Linux Command Line Basics
+IF I DO NOT MEET THE REQUIREMENTS TO ENROLL, WHAT SHOULD I DO?
+If you believe you need more preparation, here are some additional resources
+you can use:
+• Intro to Computer Science
+• Linux Command Line Basics
+• Intro to Programming Nanodegree program
+• Front End Web Developer Nanodegree
+TUITION AND TERM OF PROGRAM
+HOW IS THIS NANODEGREE PROGRAM STRUCTURED?
+The Cloud Developer Nanodegree program is comprised of content and
+curriculum to support 5 (five) projects. We estimate that students can complete
+the program in four (4) months working 10 hours per week.
+Each project will be reviewed by the Udacity reviewer network. Feedback will
+be provided and if you do not pass the project, you will be asked to resubmit
+the project until it passes.
+HOW LONG IS THIS NANODEGREE PROGRAM?
+Access to this Nanodegree program runs for the length of time specified in
+the payment card above. If you do not graduate within that time period, you
+will continue learning with month to month payments. See the Terms of Use
+and FAQs for other policies regarding the terms of access to our Nanodegree
+programs.
+CAN I SWITCH MY START DATE? CAN I GET A REFUND?
+Please see the Udacity Nanodegree program FAQs for policies on enrollment in
+our programs.
+SOFTWARE AND HARDWARE
+WHAT SOFTWARE AND VERSIONS WILL I NEED IN THIS PROGRAM?
+For this Nanodegree program, you will need a desktop or laptop computer
+running recent versions of Windows, Mac OS X, or Linux and an unmetered
+broadband Internet connection. For an ideal learning experience, a computer
+with Mac or Linux OS is recommended.

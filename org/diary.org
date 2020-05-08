@@ -1,0 +1,283 @@
+<2019-08-31 Sat> Here is the routine that I would like to set to myself.
+- 4:30 AM get up by sleeping at no later than 10:30 AM
+- Do some cardio exercise as first thing after brushing by 6 AM
+<2019-10-18 Fri>-  
+5:30 PM - 
+https://www.capgemini.com/service/applied-innovation-exchange/
+
+
+
+- AI Trends in Retail Operations
+- Trends in Mobility
+- Making the move to clean, affordable energy
+- The future of urban mobility
+- 5G in industrial Operations
+- Accelerating automotive's AI transformation
+
+* <2019-11-08 Fri>
+
+So I have resigned from FICO, yet fought to get relieving only after 3 months.  And there seems to be some small layoff too.  Amit Sowani and Praveena Varadarajan were let go.  I perhaps being on notice period, was made to continue till end of Dec 2019.
+
+I have been given some Data Analysis work to do.  Kinda interesting.  Because the stack is new (Jupyter + Python) etc.  There seems to be job cuts everywhere.  Infosys, CTS and others are doing massive layoffs.  Not sure if it is repeat of 2008 end?
+
+** What am I gonna do now?
+It needs a honest self assessment I guess. What I like and don't like.  How much long would I like if I like something?  Did I just felt bored or burned out of boredom?  I didn't like working for EMEA.  Suddenly working for somebody looks quite bad working for these EMEA/NORAM/LATAM/APAC.  If it is not for India or something of world class work like product development, then everything looks very vast.
+
+Make a schedule so that you can have best possible day you want.
+
+schedule responsibilities and rewards.  Negotiate yourself.  Measure how much you are hitting.
+
+Don't do things that make you feel worse. don't feed the monster
+
+Design your lifesyle 6 weeks of process. 
+
+Discover yourself. talents, self. Don't follow society imposed program.
+
+Life Book?
+
+Keep writing... More writing.  Write your Mind
+
+ok.  How about writing software for Workforce Optimization problem and sell the analytics (planning) solution for large IT consulting companies such as IBM, Accenture, Wipro, TCS, Infosys, Capgemini and various midtier companies?
+
+How about writing software for compliance-as-service?  Like FICO TONBELLER.
+
+Isn't it better to do that has something to do with internet?  Is it too late?  Is it too crowded?  Isn't it everybody is trying to do the same on internet?
+
+What are you gonna do mad man? Are you mad?  Why do you think of grandoise about yourself?  Why do you wish to be some sort of entpreneur or high performer  or something?  Are you longing for rich and fame?  Are you not satisfied with yourself?  What is wrong in being satisfied with oneself?  Why does everybody has to push?  Who has answers to all these?
+
+
+
+
+
+
+
+
+
+
+
+
+* <2019-11-21 Thu>
+- past experiences gives meaning to life today.
+- There are people who would benefit from  learning from you past.  You might be of value to others.
+
+** Difference between happiness or fulfillment
+   Getting vs Giving parallel to above
+   
+** What would you do if you never have to worry about money?
+   
+** What would you do if you never have to worry about what others think?
+   
+** What would you do if you no longer worry about making name for yourself?
+
+** Socialogy
+
+   3 social mindsets
+
+   - Isreal enslaved by Egypt. Egypt gave everything to Isreal
+   Give your time and will give you what you needs
+   - Babylonean built big things and they used Egyptians. Egyptians are slave to money
+   - Kingdom mindset is you value your life.  You appreciate what you have. You don't have 
+   
+** Write your Eulogy (RIP)
+
+   how do you like to be remembered by others. 
+
+   - Loving father, husband and grandfather
+   - Generous friend and positively impacted their lives of all those who got to know him.
+   - Honest and refreshing
+
+** How rich are you?
+   Who gets bigger salary
+   who has bigger car
+   
+   we always compare with who has half more than us and feel unhappy
+   If you compare with people half less than you, you feel fulfilled
+
+** Why do we do what we do
+   
+   dog chasing its tail. life going round and round circles.
+
+*** Talents
+
+   How talented are you?  people don't believe they are good enough to pursue what they want
+
+   Baloon Dog making
+      
+*** Beliefs
+
+    Young baby elephant never realizes it can overthrow the stone even after grown up!!
+    
+
+*** The art of looking in you 
+
+
+
+    
+
+* <2019-11-25 Mon>                             :ideaofday:weeklylearninggoal:
+
+** Idea of day
+
+** Weekly Learning Goals
+This week is UI week.  Increasingly applications are being built as Single Page Application (SPA).  I.e. code size of client-side is going to be much larger than back-end code.  Backend is reduced to API server serving a REST or GraphQL API.
+- Learn React overview with JSX language
+- Learn Angular overview
+- Learn VueJS overview
+- Learn Android overview with Kotlin language
+- Learn xMobile frameworks such as Cordova, Ionic, ReactNativeetc.
+
+
+*** HTML
+#+begin_src html
+
+#+end_src
+
+*** CSS
+#+begin_src css
+
+#+end_src
+
+*** JS
+#+begin_src javascript
+
+
+
+#+end_src
+
+google react dom elements
+class became className
+id 
+const someId = 'mypicture'
+console.log ('asdf');
+<button onClick{() => {}} +1 
+
+
+#+begin_src javascript
+
+let count = 0;
+const addOne = () => {
+  console.log ('addOne');
+}
+
+const templateTwo = (
+  <div>
+    <h1>Count: {count}</h1>
+    <button onClick={addOne}> +1 </button>
+  </div>
+
+
+);
+
+#+end_src
+
+#+begin_src javascript
+
+let count = 0;
+const addOne = () => {
+  console.log ('addOne');
+}
+
+const templateTwo = (
+  <div>
+    <h1>Count: {count}</h1>
+    <button onClick={addOne}> +1 </button>
+    <button>
+  </div>
+
+
+);
+
+#+end_src
+
+
+Khatabook.com team
+
+CEO 
+CTO
+VP Ops
+UX Designer
+UI Designer
+Product Lead
+Product Manager
+Lead Engineer
+Senior Software Engineer
+Android Developer
+Marketing Associate
+
+
+ICERTIS - Contract Lifecycle Management (CLM)
+
+Blockchain based
+
+- CTO Office
+  - Associate Archiect AI
+  - Chief Data Scientist ML/AI
+  - Information Security Architect
+- Executive and Admin
+  - Finance
+- Marketing
+  - Demand Generation
+  - Product Marketing
+- Product and Delivery Team
+  - CloudOps
+  - Customer Success
+  - Delivery Excellence
+  - IT
+    - System Admin
+  - Partner Enablement/Success
+  - Platform ENgineering
+  - Product Management
+  - Professional Services
+  - Solutions Engineering
+  - Sustenance ENgineering
+- Sales
+  - Business Development
+  - Customer Advocacy
+  - Enterprise Sales
+  - Inside Sales
+  - Pre-Sales
+  - Sales Management
+  - Sales Operations
+
+Swaroop has more than 20 years of experience in application and systems software development and the architecting of enterprise distributed systems. 
+
+Swaroop has a BE in Mechanical Engineering and a Master’s degree in Robotics from IIT Kanpur.
+
+In his spare time, Swaroop is a self-proclaimed “gadget freak” and “gamer.” He loves his Xbox Kinect and PS3 Move systems (he just outgrew the Wii a few months ago) and often claims that video games keep him fit! His other interests are Formula 1 and reading. He is a sci-fi aficionado and loves Isaac Asimov.
+
+
+Ujjivan Small Finance Bank
+
+Lalamove  :delivery:
+
+tech platform
+
+creditbook.com
+loanbook.com
+
+onecreditbook.com
+ekcreditbook.com
+okcredit.com
+
+
+patapat.com  (phataphat.com)
+chickpet.com (chickpete.com)
+Halbai.com
+itsloth.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+* Machine Learning
+
+Logistic Regression
+Linear Regression
+Random Forest and Decision Trees
+Natural Language Processing and Spam Filters
+Neural Networks
+Support Vector Machines
+
+* Scikit
+
+pip install scikit
+
+* ML process
+data acquisition
+data cleaning
+testdata and Train data

@@ -1,0 +1,2 @@
+#+TITLE: Literate programming
+FWIW use this.  reproducable research, literate devops are more famous that literate programming

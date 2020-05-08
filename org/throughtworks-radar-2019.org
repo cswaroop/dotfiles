@@ -1,0 +1,17 @@
+* Techniques
+** Container security scanning
+** Data integrity at origin
+** Micro frontends
+** Pipelines for infrastructure-as-code
+** Run cost as architecture fitness function
+** Testing using real device
+** Automated Machine learning (AutoML)
+** Binary attstation
+** Continuous Delivery for Machine Learning (CD4ML)
+** Data discoverability
+** Dependency drift fitness function
+** Design Systems
+** Experiment tracking tools for machine learning
+** Explainability as a first-class model selectin criterion
+** Security policy as code
+

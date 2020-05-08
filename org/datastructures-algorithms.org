@@ -1,0 +1,6 @@
+#+TITLE: Datastructures & Algorithms
+https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/Data%2BStructures%2Band%2BAlgorithms%2BSyllabus.pdf
+* Course 1: Introduction
+* Course 2: Data Structures
+* Course 3: Basic Algorithms
+* Course 4: Advanced Algorithms

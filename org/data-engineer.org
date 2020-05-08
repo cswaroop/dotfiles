@@ -1,0 +1,14 @@
+#+TITLE: Data Engineer
+https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/Data+Engineering+Nanodegree+Program+Syllabus.pdf
+
+ * Skills
+ * real-time or batch processing big data solutions like
+   * eSpark, Kafka, KSQL, MapReduce, Yarn, Hive, and HDFS.
+   * She/he should also be experienced in the AWS cloud.
+Read more at: https://yourstory.com/2020/05/jobs-roundup-dreams-sports-dream11real-time 
+
+* Course 1: Data Modeling
+* Course 2: Cloud Data Warehouses
+* Course 3: Data Lakes with Spark
+** Project 3: Big Data with Spark
+* Project 4: Automate Data Pipelines

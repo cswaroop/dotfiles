@@ -1,0 +1,16 @@
+#+TITLE: [[https://www.sakailms.org/][Sakai]]
+Learning Management Software
+
+* Links
+https://apps.ithaca.edu/
+https://sakai.screenstepslive.com/s/sakai_help/m/93065
+* Administration
+** Admin Site Perms Tool
+SiteType
+SiteRole
+Permissions
+** Aliases
+Guid -> sensible
+** Delegated Access
+** 
+

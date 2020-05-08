@@ -1,0 +1,75 @@
+#+TITLE: [[https://github.com/borkdude/babashka][Babashka]]
+* Running Babashka on windows
+
+On windows org-babel-sh command needs to be set to “cmd /k” run any shell command
+
+#+begin_src elisp
+(setq org-babel-sh-command "cmd /k")
+#+end_src
+
+
+Install/update Babashka on windows using scoop package manager
+
+#+begin_src shell
+scoop install babashka
+scoop update babashka
+#+end_src
+
+
+echo is reqired due to bug
+https://lists.gnu.org/archive/html/emacs-orgmode/2010-12/msg00446.html
+#+BEGIN_SRC shell  :results output org replace :exports results :dir babashka
+ls | bb -i "(take 2 *input*)"
+echo
+#+END_SRC
+
+#+BEGIN_SRC shell  :results output org replace :exports results
+bb -f babashka\pst.clj
+echo
+#+END_SRC
+
+bb --nrepl-server 6666
+
+#+RESULTS:
+#+begin_src org
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+d:\dotfiles>bb -f babashka\pst.clj
+05:15
+
+d:\dotfiles>More? 
+#+end_src
+#+begin_src shell :results output org
+cmd-clj  -Spath -Sdeps '{:deps {doric {:mvn/version """"""0.9.0""""""}}}'  >a.out
+set /p BABASHKA_CLASSPATH=<a.out
+bb "(use 'doric.core) (println (table [:a :b :c] [{:a 1 :b 2 :c 3} {:a 4 :b 5 :c 6}]))"
+echo
+
+#+end_src
+
+#+RESULTS:
+#+begin_src org
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+d:\dotfiles>cmd-clj  -Spath -Sdeps '{:deps {doric {:mvn/version """"""0.9.0""""""}}}'  >a.out
+
+d:\dotfiles>set /p BABASHKA_CLASSPATH=<a.out
+
+d:\dotfiles>bb "(use 'doric.core) (println (table [:a :b :c] [{:a 1 :b 2 :c 3} {:a 4 :b 5 :c 6}]))"
+
+d:\dotfiles>More? 
+#+end_src
+
+
+
+cider-connect to  eval this
+
+#+begin_src clojure :results table
+(+ 1 2)
+#+end_src
+
+#+RESULTS:
+| 3 |
+

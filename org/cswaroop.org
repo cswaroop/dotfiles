@@ -1,0 +1,104 @@
+#+TITLE: Swaroop K Chalasani
+Looking for CTO, Director of Engineering, VP of Engineering,
+Looking for Software Architect, Principal Engineer,  Consulting Developer,  Product Manager, Datascientist, Data  Analytics, Data Governance
+
+* Java/golang/python -principle Software Engg/sr Principle Software
+Job description
+We have multiple opening for Java/Golang/Python for Principle Softaware Engg/Sr Principle Software Engg.
+
+Exp : 8 to 20 yrs
+The Software Engineering team delivers next-generation data protection software application enhancements and new products for a changing world. Working at the cutting edge, we design and develop software for platforms, peripherals, applications and diagnostics - all with the most advanced technologies, tools, software engineering methodologies
+This role will require technical depth, a disciplined work approach and creative problem-solving, plus the ability to interface effectively with a diverse audience (e.g. engineering peers, engineering leadership, product management, etc.). A technical background in modern software develop environments and practices for enterprise products is required.
+
+S
+* Provides technical expertise by independently determining and developing approaches to solutions for a wide range of complex software engineering problems. Assignments may include new product development as well as upgrades, and enhancements or fixes to existing products.
+* Collaborates well with other engineers and other engineering group.
+* Offers proposed design changes/suggestions to processes and products, exerts significant latitude in determining objectives of an assignment.
+* Interacts cross functionally on matters that require coordination across functional/organizational lines.
+* Exercises considerable latitude in determining technical objectives, without appreciable direction.
+* Understands and adheres to delivery and quality targets established during the program design phase.
+* Works effectively with cross-functional and/or global teams, readily shares information with others.
+Work Experience and Education
+* Bachelors in Computer Science required, MS a plus
+* 10 + years of hands on experience,
+* 2+ years of experience in leading engineers technically.
+* 2+ years working in Scrum environment
+Required Competencies
+* Experience with requirements clarification and capturing, work planning, documenting solution design, development tasks decomposition and tracking.
+* General knowledge and application of engineering concepts.
+* Ability to analyze information and draw accurate conclusions.
+* Ability to work in a cross-functional team environment.
+* Experience in developing SaaS/BaaS applications
+* Understanding of cloud and virtualization technologies.
+* Knowledge of version control, bug tracking systems, automation (Git, JIRA, Jenkins).
+* Experience building SaaS based solutions and cloud-based services
+* Ability to work in a cross-functional team environment.
+* Understanding of cloud and virtualization technologies.
+* Passion to build large scalable systems
+* Good to have: In-depth subject matter expertise in one or more of the following: virtualization, cloud infrastructure
+* Troubleshooting skills
+* Great analytical skills
+* Knowledge and experience with multiple platforms and development language's (Unix/Windows)
+* Experience with Client / server development
+* Sense of urgency
+* Able to work under pressure and deliver projects on time
+* performance optimization
+Technical skills:
+* Strong functional programming expertise and object oriented experience
+* Deep knowledge of data structures, algorithms and system programming
+* Strong development experience atleast 2 of these in JAVA/PYTHON/GOLANG
+* Knowledge of version control, bug tracking systems, automation (Git, JIRA, Jenkins).
+* Excellent code detective and root cause analysis skills on a variety of platforms and languages
+* Knowledge of CPU architecture, Multi-Threaded Environments, Databases, Storage Technologies
+* Good to have: Knowledge in Azure, AWS, Docker and Kubernetes is a plus
+* Graph theory
+* Experience with multi-process / multi-threaded development
+
+* Senior Consultant Professional Services, FICO Analytic Cloud
+FICO Analytic Cloud is a hybrid =financial services cloud= used by Banks and Financial Services powered by AWS and FICO data centers.
+- Client Advocacy from Onboarding to customization in FICO Analytic Cloud.  Tracking varoius compliance concerns by clients and building controls in the cloud.  
+- Tools: Bash, Go, Python on OpenShift, Docker, Kubernetes, AWS
+- Standards: SOX, HIPAA, PCI, Secure Software Development Life Cycle, Penetration testing
+* Engineering Manager, Eka Software Solutions
+A Software-as-service (SaaS) company providing end-to-end commodity trading solutions
+- Built  multi-tenant data piplelins and BI in the  platform. Managed 10 member team.  Delivered on a  large product back log by coordinating with various groups.
+- Migrated an onpremise solution to cloud gradually as hosting solution to SaaS. 
+* Senior Manager Data Governance, Ocwen Financial Services
+- Part of Data Governance and controls. Setup various IT governance standards like metadata repository, master data management  SOX and PCI compliance etc.
+* Data Architect, Altisource Labs
+- Modernized legacy data pipelins written in PLSQL to Apache PigLatin on Hadoop cluster.
+- Piloted Tableau BI tool introducing self service BI.
+* Principal Engineer, IBM Information Management Group
+- Developed a Healthcare Payer businss intelligence system.  Modeled Bi-temporal data model in DB2 and star schemas in Netezza.  Also Wrote stored procedures to summarize the data.
+* Member Technical Staff, IBM Research, NY
+- Developed businss analytics and industrial solutions .
+- Developed Machine Learning system for automatically mapping part numbers in transaction data for deriving spend analytics  for an aerospace contractor.
+- Developed Eclipse tool to merge SAP configuration.  Developed ANTLR based parser for ABAP programming language.
+* Staff Software Engineer, IBM WebSphere Product Development
+- Developed EJB container in WebSphere Application server
+- Developed XMLConfig and Jython (Python for JVM) command line interface.
+* Systems Engineer, IBM High Performance Computing Group
+- Developed Object Oriented middlware  software for AIX/Linux on PowerPC
+- Developed a scheduling system optimizing for PowerPC/x86  using mulitthreading OpenMP/C library
+- Virtualization, AIX Logical Partitions
+
+* Skills
+** Technical Skills
+Programming ::  Java, Python, Go, SQL, Clojure, refactoring, unit testing, code reviews, git pull requests, Object oriented and Functional programming.
+Problem Solving :: Data structures & Algorithms, Creativity
+Applications Engineering & DevOps : Design and architecture of multi-threaded and multi-process distributed systems, MVC Web Appications, Event Systems, Micro services, Large scale data processing, Cloud, Performance testing, Fault tolerance, Read/Write heavy tradeoffs, CAP, Containerization
+Platforms :: Java, Linux, Docker
+Databases :: Oracle, Postgres, Mysql, Couchbase, Elasticsearch, Kafka
+Data :: JSON, XML, Relational, Yaml
+** Organization Skills
+Multi year Software Products Delivery in agile environments with CI/CD
+Building high performance engineering teams,  
+Personal Coaching, 
+Upward and downward management
+Client facing
+Project Management
+Product Management
+
+* Education
+- M.Tech, IIT Kanpur
+- B.Tech, NIT Warangal

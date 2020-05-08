@@ -1,6 +1,7 @@
-* Learning
+#+TITLE: Clojure
   Clojure runs on JVMs (OpenJDK/GraalVM)
   ClojureScript runs on NodeJS/Browser
+* Learning
 - https://clojure.org/api/cheatsheet
 - https://clojure.org/reference
 - https://cljdoc.org/
@@ -11,8 +12,11 @@
 - https://purelyfunctional.tv
 - https://www.jacekschae.com
 
-Books | https://github.com/clojurians-org/clojure-ebook-2
-
+Books 
+- https://www.braveclojure.com/
+- http://funcool.github.io/clojurescript-unraveled
+- https://practicalli.github.io/
+- https://purelyfunctional.tv/
 - Lisp 
   https://github.com/cswaroop/lisp-ebook
 - Clojure Cookbook
@@ -39,8 +43,9 @@ Date & Time
 - deps.edn
 - boot
 - leiningen
-- shadow-cljs
-- babashka
+- shadow-cljs  :: CI server for ClojureScript
+- babashka :: What if you can write bash like scripts in clojure  that starts in
+  milli seconds
 - kondo
 - Emacs/cider 
 - VSCode/Calva
@@ -292,7 +297,7 @@ Kubernetes
   Configuration files
 - https://github.com/juxt/aero  
 
-* Rule Engine
+* Rule Engines
 - https://github.com/cerner/clara-rules
 - https://github.com/oakes/clarax
 
@@ -326,10 +331,20 @@ Production applications
 - https://www.bradcypert.com/
 - https://aphyr.com/tags/Clojure-from-the-ground-up
 - https://tech.toryanderson.com/2018/06/29/extending-honeysql-with-json-operators/
-- 
 * Benchmarking
 - Criterium
   https://github.com/hugoduncan/criterium
 * GPU programming
 - OpenCL
   https://github.com/uncomplicate/clojurecl
+* Learn
+** literals
+#+begin_src clojure :results value
+  1
+  “cleanliness is next to godliness”
+  [“cleanliness”  “is” “next” “to” “godliness”]
+  (+ 1 2 3)
+#+end_src
+** Control flow
+if-do-when
+

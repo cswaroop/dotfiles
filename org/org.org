@@ -1,0 +1,31 @@
+#+TITLE:   [[https://orgmode.org/][Org-Mode]] usage in spacemacs
+#+FILETAGS: :orgmode:dotfile:
+
+Your life in plain text..... Wow
+https://orgmode.org/org.html
+
+You can do 
+Documentation (with ox) 
+Literate Programming (with Babel)
+- [[https://www.youtube.com/watch?v=dljNabciEGg][Literate DevOps]]
+Task ManagementNote Taking
+
+
+* Tags
+Tagging helps in cross relating information and is the cornerstone of everything
+
+:work:
+:work:urgent:
+
+C-c C-q (org-set-tags-command)
+C-c C-c (org-set-tags-command)
+
+
+#+TAGS: laptop car pc sailboat
+
+ Tag Searches
+
+M-x org-agenda m (org-tags-view)
+C-c / m or C-c \ (org-match-sparse-tree)
+
+

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blogging with Emacs</title>
+<meta name="generator" content="Org mode" />
+<meta name="description" content="Instructions for getting Emacs to be able to publish a blog system using org-page"
+ />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Blogging with Emacs</h1>
+<p>
+Before attempting any more heavy-weight blogging design, I am going to
+attempt nothing more than the standard org-mode export features
+coupled with some magic available to JavaScript.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">-*- mode: emacs-lisp -*-</span>
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">dotspacemacs/layers</span> <span style="color: #bc6ec5;">()</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq-default</span>
+   dotspacemacs-distribution 'spacemacs
+   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-ask-for-lazy-installation t
+   <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Paths must have a trailing slash (i.e. `</span><span style="color: #a45bad; background-color: #292e34;">~/.mycontribs/</span><span style="color: #2aa1ae; background-color: #292e34;">')</span>
+   dotspacemacs-configuration-layer-path '<span style="color: #2d9574;">()</span>
+   dotspacemacs-configuration-layers
+   '<span style="color: #2d9574;">(</span>
+     <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">maintain alphabetical order</span>
+     <span style="color: #67b11d;">(</span>auto-completion
+      <span style="color: #4f97d7;">:variables</span>
+      auto-completion-enable-snippets-in-popup t
+      auto-completion-return-key-behavior nil
+      auto-completion-tab-key-behavior 'cycle
+      auto-completion-private-snippets-directory <span style="color: #2d9574;">"~/snippets/"</span>
+      auto-completion-enable-help-tooltip 'manual
+      <span style="color: #4f97d7;">:disabled-for</span> org erc<span style="color: #67b11d;">)</span>
+     colors
+     command-log
+     csv
+     <span style="color: #67b11d;">(</span>clojure <span style="color: #4f97d7;">:variables</span> clojure-enable-fancify-symbols t<span style="color: #67b11d;">)</span>
+     docker
+     emacs-lisp
+     emoji
+     <span style="color: #2aa1ae; background-color: #292e34;">;;</span><span style="color: #2aa1ae; background-color: #292e34;">evil-mc</span>
+     finance
+     git
+     github
+     go
+     helm
+     html
+     imenu-list
+     markdown
+     <span style="color: #2aa1ae; background-color: #292e34;">;;</span><span style="color: #2aa1ae; background-color: #292e34;">(multiple-cursors :variables multiple-cursors-backend 'evil-m)</span>
+     <span style="color: #67b11d;">(</span>org <span style="color: #4f97d7;">:variables</span>
+          org-enable-org-journal-support t
+          org-journal-dir <span style="color: #2d9574;">"D:/MyProjects/personal"</span>
+          org-enable-hugo-support t<span style="color: #67b11d;">)</span>
+     <span style="color: #67b11d;">(</span>ranger <span style="color: #4f97d7;">:variables</span>
+             ranger-show-preview t
+             ranger-show-hidden t
+             ranger-cleanup-eagerly t
+             ranger-cleanup-on-disable t
+             ranger-ignored-extensions '<span style="color: #b1951d;">(</span><span style="color: #2d9574;">"mkv"</span> <span style="color: #2d9574;">"flv"</span> <span style="color: #2d9574;">"iso"</span> <span style="color: #2d9574;">"mp4"</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span>
+     <span style="color: #67b11d;">(</span>shell <span style="color: #4f97d7;">:variables</span>
+            shell-default-height <span style="color: #a45bad;">30</span>
+            shell-default-position 'bottom<span style="color: #67b11d;">)</span>
+     <span style="color: #67b11d;">(</span>spell-checking <span style="color: #4f97d7;">:variables</span> spell-checking-enable-by-default nil<span style="color: #67b11d;">)</span>
+     <span style="color: #67b11d;">(</span>syntax-checking <span style="color: #4f97d7;">:variables</span> syntax-checking-enable-by-default nil<span style="color: #67b11d;">)</span>
+     <span style="color: #67b11d;">(</span>semantic <span style="color: #4f97d7;">:disabled-for</span> emacs-lisp<span style="color: #67b11d;">)</span>
+     <span style="color: #67b11d;">(</span>sql <span style="color: #4f97d7;">:variables</span> sql-capitalize-keywords t<span style="color: #67b11d;">)</span>
+     search-engine
+     <span style="color: #2aa1ae; background-color: #292e34;">;;</span><span style="color: #2aa1ae; background-color: #292e34;">solidity</span>
+     typography
+     version-control
+     windows-scripts
+     yaml
+     <span style="color: #2d9574;">)</span>
+   dotspacemacs-additional-packages '<span style="color: #2d9574;">(</span>
+                                      restclient
+                                      ob-restclient
+                                      leuven-theme
+                                      monokai-pro-theme
+                                      material-theme
+                                      color-theme-sanityinc-tomorrow
+                                      demo-it
+                                      multiple-cursors
+                                      floobits
+                                      <span style="color: #2aa1ae; background-color: #292e34;">;;</span><span style="color: #2aa1ae; background-color: #292e34;">org-projectile</span>
+                                      powerline<span style="color: #2d9574;">)</span>
+   dotspacemacs-frozen-packages '<span style="color: #2d9574;">()</span>
+   dotspacemacs-excluded-packages '<span style="color: #2d9574;">()</span>
+   dotspacemacs-install-packages 'used-only<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">dotspacemacs/init</span> <span style="color: #bc6ec5;">()</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq-default</span>
+   dotspacemacs-elpa-https t
+   dotspacemacs-elpa-timeout <span style="color: #a45bad;">5</span>
+   dotspacemacs-check-for-update nil
+   dotspacemacs-elpa-subdirectory nil
+   dotspacemacs-editing-style 'vim
+   dotspacemacs-verbose-loading nil
+   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-lists '<span style="color: #2d9574;">(</span><span style="color: #67b11d;">(</span>recents . <span style="color: #a45bad;">5</span><span style="color: #67b11d;">)</span>
+                                <span style="color: #67b11d;">(</span>projects . <span style="color: #a45bad;">7</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+   dotspacemacs-startup-buffer-responsive t
+   dotspacemacs-scratch-mode 'text-mode
+   dotspacemacs-themes '<span style="color: #2d9574;">(</span>
+                         spacemacs-dark
+                         spacemacs-light
+                         sanityinc-tomorrow-day
+                         sanityinc-tomorrow-night
+                         sanityinc-tomorrow-bright
+                         sanityinc-tomorrow-eighties <span style="color: #2d9574;">)</span>
+   dotspacemacs-colorize-cursor-according-to-state t
+   dotspacemacs-default-font '<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"Source Sans Pro"</span>
+                               <span style="color: #4f97d7;">:size</span> <span style="color: #a45bad;">13</span>
+                               <span style="color: #4f97d7;">:weight</span> normal
+                               <span style="color: #4f97d7;">:width</span> normal
+                               <span style="color: #4f97d7;">:powerline-scale</span> <span style="color: #a45bad;">1.1</span><span style="color: #2d9574;">)</span>
+   dotspacemacs-leader-key <span style="color: #2d9574;">"SPC"</span>
+   dotspacemacs-emacs-command-key <span style="color: #2d9574;">"SPC"</span>
+   dotspacemacs-ex-command-key <span style="color: #2d9574;">":"</span>
+   dotspacemacs-emacs-leader-key <span style="color: #2d9574;">"M-m"</span>
+   dotspacemacs-major-mode-leader-key <span style="color: #2d9574;">","</span>
+   dotspacemacs-major-mode-emacs-leader-key <span style="color: #2d9574;">"C-M-m"</span>
+   dotspacemacs-distinguish-gui-tab nil
+   dotspacemacs-remap-Y-to-y$ nil
+   dotspacemacs-retain-visual-state-on-shift t
+   dotspacemacs-visual-line-move-text nil
+   dotspacemacs-ex-substitute-global nil
+   dotspacemacs-default-layout-name <span style="color: #2d9574;">"Default"</span>
+   dotspacemacs-display-default-layout nil
+   dotspacemacs-auto-resume-layouts nil
+   dotspacemacs-large-file-size <span style="color: #a45bad;">1</span>
+   dotspacemacs-auto-save-file-location 'cache
+   dotspacemacs-max-rollback-slots <span style="color: #a45bad;">5</span>
+   dotspacemacs-helm-resize nil
+   dotspacemacs-helm-no-header nil
+   dotspacemacs-helm-position 'bottom
+   dotspacemacs-helm-use-fuzzy 'always
+   dotspacemacs-enable-paste-transient-state nil
+   dotspacemacs-which-key-delay <span style="color: #a45bad;">0.4</span>
+   dotspacemacs-which-key-position 'bottom
+   dotspacemacs-loading-progress-bar t
+   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-use-non-native nil
+   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-active-transparency <span style="color: #a45bad;">90</span>
+   dotspacemacs-inactive-transparency <span style="color: #a45bad;">90</span>
+   dotspacemacs-show-transient-state-title t
+   dotspacemacs-show-transient-state-color-guide t
+   dotspacemacs-mode-line-unicode-symbols nil
+   dotspacemacs-smooth-scrolling t
+   dotspacemacs-line-numbers  '<span style="color: #2d9574;">(</span><span style="color: #4f97d7;">:relative</span> t<span style="color: #2d9574;">)</span> 
+   dotspacemacs-folding-method 'evil
+   dotspacemacs-smartparens-strict-mode t
+   dotspacemacs-smart-closing-parenthesis t
+   dotspacemacs-highlight-delimiters 'all
+   dotspacemacs-persistent-server nil
+   dotspacemacs-search-tools '<span style="color: #2d9574;">(</span><span style="color: #2d9574;">"ag"</span> <span style="color: #2d9574;">"pt"</span> <span style="color: #2d9574;">"ack"</span> <span style="color: #2d9574;">"grep"</span><span style="color: #2d9574;">)</span>
+   dotspacemacs-default-package-repository nil
+   dotspacemacs-whitespace-cleanup nil
+   <span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">dotspacemacs/user-init</span> <span style="color: #bc6ec5;">()</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">org-clojure</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> org-babel-clojure-backend 'cider<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> org-babel-sh-command <span style="color: #2d9574;">"cmd /k"</span><span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> leuven-scale-outline-headlines nil<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> leuven-scale-org-agenda-structure nil<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>global-set-key <span style="color: #2d9574;">(</span>kbd <span style="color: #2d9574;">"C-S-c C-S-c"</span><span style="color: #2d9574;">)</span> 'mc/edit-lines<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>global-set-key <span style="color: #2d9574;">(</span>kbd <span style="color: #2d9574;">"C-&gt;"</span><span style="color: #2d9574;">)</span> 'mc/mark-next-like-this<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>global-set-key <span style="color: #2d9574;">(</span>kbd <span style="color: #2d9574;">"C-&lt;"</span><span style="color: #2d9574;">)</span> 'mc/mark-previous-like-this<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>global-set-key <span style="color: #2d9574;">(</span>kbd <span style="color: #2d9574;">"C-c C-&lt;"</span><span style="color: #2d9574;">)</span> 'mc/mark-all-like-this<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> org-capture-templates
+        '<span style="color: #2d9574;">(</span><span style="color: #67b11d;">(</span><span style="color: #2d9574;">"t"</span> <span style="color: #2d9574;">"Todo"</span> entry <span style="color: #b1951d;">(</span>file+headline <span style="color: #2d9574;">"D:/MyProjects/personal/gtd.org"</span> <span style="color: #2d9574;">"Tasks"</span><span style="color: #b1951d;">)</span>
+           <span style="color: #2d9574;">"* </span><span style="color: #dc752f;">TODO</span><span style="color: #2d9574;"> %?\n  %i\n  %a"</span><span style="color: #67b11d;">)</span>
+          <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"d"</span> <span style="color: #2d9574;">"Journal"</span> entry <span style="color: #b1951d;">(</span>file+datetree <span style="color: #2d9574;">"D:/MyProjects/personal/journal.org"</span><span style="color: #b1951d;">)</span>
+           <span style="color: #2d9574;">"* %?\nEntered on %U\n  %i\n  %a"</span><span style="color: #67b11d;">)</span>
+          <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"j"</span> <span style="color: #2d9574;">"Job"</span> entry <span style="color: #b1951d;">(</span>file+datetree <span style="color: #2d9574;">"D:/MyProjects/personal/job.org"</span><span style="color: #b1951d;">)</span>
+           <span style="color: #2d9574;">"* %?\nEntered on %U\n  %i\n  %a"</span><span style="color: #67b11d;">)</span>
+          <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"c"</span> <span style="color: #2d9574;">"Cooking"</span> entry <span style="color: #b1951d;">(</span>file+datetree <span style="color: #2d9574;">"d:/MyProjects/cooking/log.org"</span><span style="color: #b1951d;">)</span>
+           <span style="color: #2d9574;">"* %?\nEntered on %U\n  %i\n  %a"</span><span style="color: #67b11d;">)</span>
+          <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"n"</span> <span style="color: #2d9574;">"Note"</span> entry <span style="color: #b1951d;">(</span>file+datetree <span style="color: #2d9574;">"D:/MyProjects/personal/quicknote.org"</span><span style="color: #b1951d;">)</span>
+           <span style="color: #2d9574;">"* %?\nEntered on %U\n  %i\n  %a"</span><span style="color: #67b11d;">)</span>
+          <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"p"</span> <span style="color: #2d9574;">"Problem"</span> entry <span style="color: #b1951d;">(</span>file+datetree <span style="color: #2d9574;">"D:/MyProjects/personal/problems.org"</span><span style="color: #b1951d;">)</span>
+           <span style="color: #2d9574;">"* %?\nEntered on %U\n  %i\n  %a"</span><span style="color: #67b11d;">)</span>
+          <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"m"</span> <span style="color: #2d9574;">"Company"</span> entry <span style="color: #b1951d;">(</span>file+datetree <span style="color: #2d9574;">"D:/MyProjects/personal/companies.org"</span><span style="color: #b1951d;">)</span>
+           <span style="color: #2d9574;">"* %?\nEntered on %U\n  %i\n  %a"</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">dotspacemacs/user-config</span> <span style="color: #bc6ec5;">()</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">require</span> '<span style="color: #a45bad;">ob-shell</span><span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">defadvice</span> <span style="color: #bc6ec5; font-weight: bold;">org-babel-sh-evaluate</span> <span style="color: #2d9574;">(</span>around set-shell activate<span style="color: #2d9574;">)</span>
+    <span style="color: #9f8766;">"Add header argument :shcmd that determines the shell to be called."</span>
+    <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">let*</span> <span style="color: #67b11d;">(</span><span style="color: #b1951d;">(</span>org-babel-sh-command <span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">or</span> <span style="color: #bc6ec5;">(</span>cdr <span style="color: #2d9574;">(</span>assoc <span style="color: #4f97d7;">:shcmd</span> params<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span> org-babel-sh-command<span style="color: #4f97d7;">)</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span>
+      ad-do-it
+      <span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Miscellaneous</span>
+  <span style="color: #bc6ec5;">(</span>add-hook 'text-mode-hook #'visual-line-mode<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>add-hook 'org-mode-hook #'visual-line-mode<span style="color: #bc6ec5;">)</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">(add-hook 'text-mode-hook 'auto-fill-mode)</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> org-use-speed-commands t<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>define-key evil-motion-state-map <span style="color: #2d9574;">"gj"</span> 'evil-next-visual-line<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>define-key evil-motion-state-map <span style="color: #2d9574;">"gk"</span> 'evil-previous-visual-line<span style="color: #bc6ec5;">)</span>
+
+  <span style="color: #bc6ec5;">(</span>add-hook 'text-mode-hook 'typo-mode<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>add-hook 'makefile-mode-hook 'whitespace-mode<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>add-hook 'prog-mode-hook 'page-break-lines-mode<span style="color: #bc6ec5;">)</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">(add-hook 'after-make-frame-functions</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">;;           </span><span style="color: #2aa1ae; background-color: #292e34;">(defun bb/delayed-redraw (frame)</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">;;             </span><span style="color: #2aa1ae; background-color: #292e34;">(run-with-timer 0.2 nil 'redraw-frame frame)))</span>
+  <span style="color: #bc6ec5;">(</span>remove-hook 'prog-mode-hook 'spacemacs//show-trailing-whitespace<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>define-coding-system-alias 'utf8 'utf-8<span style="color: #bc6ec5;">)</span>
+<span style="color: #2aa1ae; background-color: #292e34;">;;;</span><span style="color: #2aa1ae; background-color: #292e34;">_*======================================================================</span>
+<span style="color: #2aa1ae; background-color: #292e34;">;;;</span><span style="color: #2aa1ae; background-color: #292e34;">_* define a function to scroll with the cursor in place, moving the</span>
+<span style="color: #2aa1ae; background-color: #292e34;">;;;</span><span style="color: #2aa1ae; background-color: #292e34;">_* page instead</span>
+<span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Navigation Functions</span>
+<span style="color: #2aa1ae; background-color: #292e34;">;;  </span><span style="color: #2aa1ae; background-color: #292e34;">https://stackoverflow.com/questions/8993183/emacs-scroll-buffer-not-point</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">scroll-down-in-place</span> <span style="color: #2d9574;">(</span>n<span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">interactive</span> <span style="color: #2d9574;">"p"</span><span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span>forward-line <span style="color: #67b11d;">(</span>* <span style="color: #a45bad;">-1</span> n<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">unless</span> <span style="color: #67b11d;">(</span>eq <span style="color: #b1951d;">(</span>window-start<span style="color: #b1951d;">)</span> <span style="color: #b1951d;">(</span>point-min<span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span>
+      <span style="color: #67b11d;">(</span>scroll-down n<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">scroll-up-in-place</span> <span style="color: #2d9574;">(</span>n<span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">interactive</span> <span style="color: #2d9574;">"p"</span><span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span>forward-line n<span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">unless</span> <span style="color: #67b11d;">(</span>eq <span style="color: #b1951d;">(</span>window-end<span style="color: #b1951d;">)</span> <span style="color: #b1951d;">(</span>point-max<span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span>
+      <span style="color: #67b11d;">(</span>scroll-up n<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>global-set-key <span style="color: #2d9574;">"\M-n"</span> 'scroll-up-in-place<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">(</span>global-set-key <span style="color: #2d9574;">"\M-p"</span> 'scroll-down-in-place<span style="color: #bc6ec5;">)</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Spaceline</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> powerline-default-separator 'arrow
+        spaceline-buffer-encoding-abbrev-p nil
+        spaceline-version-control-p nil
+        spaceline-erc-track-p nil<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Do not write anything past this comment. This is where Emacs will</span>
+<span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">auto-generate custom variable definitions.</span>
+<span style="color: #4f97d7;">(</span>custom-set-variables
+ <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">custom-set-variables was added by Custom.</span>
+ <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">If you edit it by hand, you could mess it up, so be careful.</span>
+ <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Your init file should contain only one such instance.</span>
+ <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">If there is more than one, they won't work right.</span>
+ '<span style="color: #bc6ec5;">(</span>ansi-color-faces-vector
+   <span style="color: #2d9574;">[</span>default bold shadow italic underline bold bold-italic bold<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>beacon-color <span style="color: #2d9574;">"#f2777a"</span><span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>custom-safe-themes
+   <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">quote</span>
+    <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"732b807b0543855541743429c9979ebfb363e27ec91e82f463c91e68c772f6e3"</span> <span style="color: #2d9574;">"a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a"</span> <span style="color: #2d9574;">"983eb22dae24cab2ce86ac26700accbf615a3f41fef164085d829fe0bcd3c236"</span> <span style="color: #2d9574;">"fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088"</span> <span style="color: #2d9574;">"5c2392170fffe8da6d1794099b5a42fae4100acb637d896fec3066fea81d3eb9"</span> default<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>evil-want-Y-yank-to-eol nil<span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>fci-rule-color <span style="color: #2d9574;">"#515151"</span> t<span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>flycheck-color-mode-line-face-to-color <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">quote</span> mode-line-buffer-id<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>frame-background-mode <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">quote</span> dark<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>helm-completion-style <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">quote</span> emacs<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>package-selected-packages
+   <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">quote</span>
+    <span style="color: #67b11d;">(</span>powerline parent-mode flx highlight smartparens goto-chg undo-tree f s hydra lv spinner pkg-info epl bind-map bind-key packed async popup magit-gh-pulls github-search github-clone github-browse-file gist gh marshal logito pcache ht floobits go-guru go-eldoc company-go go-mode avy anzu iedit evil helm helm-core projectile dash web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data material-theme monokai-pro-theme yaml-mode web-beautify typo stickyfunc-enhance srefactor sql-indent livid-mode skewer-mode simple-httpd js2-refactor js2-mode js-doc csv-mode company-quickhelp coffee-mode ranger flyspell-correct-helm flyspell-correct auto-dictionary demo-it color-theme-sanityinc-tomorrow emoji-cheat-sheet-plus company-emoji leuven-theme clojure-snippets clj-refactor inflections multiple-cursors paredit cider-eval-sexp-fu cider sesman queue parseedn clojure-mode parseclj a rainbow-mode rainbow-identifiers color-identifiers-mode imenu-list dockerfile-mode docker tablist json-mode docker-tramp json-snatcher json-reformat command-log-mode engine-mode helm-company helm-c-yasnippet fuzzy company-statistics company auto-yasnippet ac-ispell auto-complete yasnippet ob-clojurescript ledger-mode flycheck-ledger ob-restclient restclient restclient-helm restclient xterm-color smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download multi-term mmm-mode markdown-toc markdown-mode magit-gitflow magit-popup htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip pos-tip flycheck evil-magit magit git-commit with-editor transient eshell-z eshell-prompt-extras esh-help diff-hl powershell ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>vc-annotate-background nil<span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>vc-annotate-color-map
+   <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">quote</span>
+    <span style="color: #67b11d;">(</span><span style="color: #b1951d;">(</span><span style="color: #a45bad;">20</span> . <span style="color: #2d9574;">"#f2777a"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">40</span> . <span style="color: #2d9574;">"#f99157"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">60</span> . <span style="color: #2d9574;">"#ffcc66"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">80</span> . <span style="color: #2d9574;">"#99cc99"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">100</span> . <span style="color: #2d9574;">"#66cccc"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">120</span> . <span style="color: #2d9574;">"#6699cc"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">140</span> . <span style="color: #2d9574;">"#cc99cc"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">160</span> . <span style="color: #2d9574;">"#f2777a"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">180</span> . <span style="color: #2d9574;">"#f99157"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">200</span> . <span style="color: #2d9574;">"#ffcc66"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">220</span> . <span style="color: #2d9574;">"#99cc99"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">240</span> . <span style="color: #2d9574;">"#66cccc"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">260</span> . <span style="color: #2d9574;">"#6699cc"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">280</span> . <span style="color: #2d9574;">"#cc99cc"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">300</span> . <span style="color: #2d9574;">"#f2777a"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">320</span> . <span style="color: #2d9574;">"#f99157"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">340</span> . <span style="color: #2d9574;">"#ffcc66"</span><span style="color: #b1951d;">)</span>
+     <span style="color: #b1951d;">(</span><span style="color: #a45bad;">360</span> . <span style="color: #2d9574;">"#99cc99"</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>vc-annotate-very-old-color nil<span style="color: #bc6ec5;">)</span>
+ '<span style="color: #bc6ec5;">(</span>window-divider-mode nil<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span>custom-set-faces
+ <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">custom-set-faces was added by Custom.</span>
+ <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">If you edit it by hand, you could mess it up, so be careful.</span>
+ <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Your init file should contain only one such instance.</span>
+ <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">If there is more than one, they won't work right.</span>
+ <span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+<div id="outline-container-orgd987020" class="outline-2">
+<h2 id="orgd987020">Requirements? Goals?</h2>
+<div class="outline-text-2" id="text-orgd987020">
+<p>
+What do I want from my website?
+</p>
+
+<ul class="org-ul">
+<li>Static web pages with minimal HTML content
+<ul class="org-ul">
+<li>Easier for disabled people</li>
+<li>Easier to render on mobile devices</li>
+<li>Easier to view on text-based browsers, which I enjoy more</li>
+</ul></li>
+<li>Colors and Layout?
+<ul class="org-ul">
+<li>Surely we can do most everything possible with CSS</li>
+<li>If not, then jQuery can come to the rescue</li>
+</ul></li>
+<li>Buttons after the article:
+<ul class="org-ul">
+<li>Share could bring up a submenu of options, which would be nicer looking</li>
+<li>Comment should call my "Commenting" service</li>
+<li>Search needs to physically be above, but in the DOM it should
+come after the article&#x2026; you know, content first</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org83b3231" class="outline-2">
+<h2 id="org83b3231">Prerequisites</h2>
+<div class="outline-text-2" id="text-org83b3231">
+<p>
+And then require them:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">require</span> '<span style="color: #a45bad;">ox-html</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">require</span> '<span style="color: #a45bad;">ox-publish</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">require</span> '<span style="color: #a45bad;">ox-rss</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+
+<p>
+Need htmlize for the code highlighting in the exports:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">use-package</span> <span style="color: #a45bad;">htmlize</span>
+   <span style="color: #4f97d7;">:ensure</span> t<span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org95fabf9" class="outline-2">
+<h2 id="org95fabf9">Blog Publishing Settings</h2>
+<div class="outline-text-2" id="text-org95fabf9">
+<p>
+The brilliance of <code>org-mode</code> is the ability to publish your notes
+as HTML files into a web server. See <a href="http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">these instructions</a>. I've
+transitioned over to the new <code>ox</code> exporter, see <a href="http://orgmode.org/worg/org-8.0.html">these instructions</a>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> org-mode-websrc-directory <span style="color: #bc6ec5;">(</span>concat <span style="color: #2d9574;">(</span>getenv <span style="color: #2d9574;">"HOME"</span><span style="color: #2d9574;">)</span> <span style="color: #2d9574;">"/website"</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> org-mode-publishing-directory <span style="color: #bc6ec5;">(</span>concat <span style="color: #2d9574;">(</span>getenv <span style="color: #2d9574;">"HOME"</span><span style="color: #2d9574;">)</span> <span style="color: #2d9574;">"/Public/"</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> org-publish-project-alist
+      `<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span><span style="color: #2d9574;">"all"</span>
+         <span style="color: #4f97d7;">:components</span> <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"blog-content"</span> <span style="color: #2d9574;">"blog-static"</span> <span style="color: #2d9574;">"org-notes"</span> <span style="color: #2d9574;">"blog-rss"</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"blog-content"</span>
+         <span style="color: #4f97d7;">:base-directory</span>       ,org-mode-websrc-directory
+         <span style="color: #4f97d7;">:base-extension</span>       <span style="color: #2d9574;">"org"</span>
+         <span style="color: #4f97d7;">:publishing-directory</span> ,org-mode-publishing-directory
+         <span style="color: #4f97d7;">:recursive</span>            t
+         <span style="color: #4f97d7;">:publishing-function</span>  org-html-publish-to-html
+         <span style="color: #4f97d7;">:preparation-function</span> org-mode-blog-prepare
+         <span style="color: #4f97d7;">:export-with-tags</span>     nil
+         <span style="color: #4f97d7;">:headline-levels</span>      <span style="color: #a45bad;">4</span>
+         <span style="color: #4f97d7;">:auto-preamble</span>        t
+         <span style="color: #4f97d7;">:auto-postamble</span>       nil
+         <span style="color: #4f97d7;">:auto-sitemap</span>         t
+         <span style="color: #4f97d7;">:sitemap-title</span>        <span style="color: #2d9574;">"Howardisms"</span>
+         <span style="color: #4f97d7;">:section-numbers</span>      nil
+         <span style="color: #4f97d7;">:table-of-contents</span>    nil
+         <span style="color: #4f97d7;">:with-toc</span>             nil
+         <span style="color: #4f97d7;">:with-author</span>          nil
+         <span style="color: #4f97d7;">:with-creator</span>         nil
+         <span style="color: #4f97d7;">:with-tags</span>            nil
+         <span style="color: #4f97d7;">:with-smart-quotes</span>    t
+
+         <span style="color: #4f97d7;">:html-doctype</span>         <span style="color: #2d9574;">"html5"</span>
+         <span style="color: #4f97d7;">:html-html5-fancy</span>     t
+         <span style="color: #4f97d7;">:html-preamble</span>        org-mode-blog-preamble
+         <span style="color: #4f97d7;">:html-postamble</span>       org-mode-blog-postamble
+         <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">:html-postamble "&lt;hr&gt;&lt;div id='comments'&gt;&lt;/div&gt;"</span>
+         <span style="color: #4f97d7;">:html-head</span>  <span style="color: #2d9574;">"&lt;link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'&gt;</span>
+<span style="color: #2d9574;">            &lt;link href='http://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'&gt;</span>
+<span style="color: #2d9574;">            &lt;link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'&gt;</span>
+<span style="color: #2d9574;">            &lt;link rel=\"stylesheet\" href=\"/css/styles.css\" type=\"text/css\"/&gt;\n"</span>
+         <span style="color: #4f97d7;">:html-head-extra</span> <span style="color: #2d9574;">"&lt;script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"&gt;&lt;/script&gt;</span>
+<span style="color: #2d9574;">            &lt;script src=\"/js/magic.js\"&gt;&lt;/script&gt;</span>
+<span style="color: #2d9574;">            &lt;link rel=\"icon\" href=\"/img/dragon.svg\"&gt;</span>
+<span style="color: #2d9574;">            &lt;link rel=\"shortcut icon\" href=\"/img/dragon-head.png\"&gt;</span>
+<span style="color: #2d9574;">            &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /&gt;"</span>
+         <span style="color: #4f97d7;">:html-head-include-default-style</span> nil
+         <span style="color: #2d9574;">)</span>
+
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"blog-static"</span>
+         <span style="color: #4f97d7;">:base-directory</span>       ,org-mode-websrc-directory
+         <span style="color: #4f97d7;">:base-extension</span>       <span style="color: #2d9574;">"css</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">js</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">png</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">jpg</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">gif</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">pdf</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">mp3</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">ogg</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">swf</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">svg"</span>
+         <span style="color: #4f97d7;">:publishing-directory</span> ,org-mode-publishing-directory
+         <span style="color: #4f97d7;">:recursive</span>            t
+         <span style="color: #4f97d7;">:publishing-function</span>  org-publish-attachment
+         <span style="color: #2d9574;">)</span>
+
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"blog-rss"</span>
+         <span style="color: #4f97d7;">:base-directory</span>        ,org-mode-websrc-directory
+         <span style="color: #4f97d7;">:base-extension</span>        <span style="color: #2d9574;">"org"</span>
+         <span style="color: #4f97d7;">:rss-image-url</span>         <span style="color: #2d9574;">"http://howardism.org/img/dragon-head.png"</span>
+         <span style="color: #4f97d7;">:publishing-directory</span>  ,org-mode-publishing-directory
+         <span style="color: #4f97d7;">:publishing-function</span>   <span style="color: #67b11d;">(</span>org-rss-publish-to-rss<span style="color: #67b11d;">)</span>
+         <span style="color: #4f97d7;">:html-link-home</span>        <span style="color: #2d9574;">"http://www.howardism.org/"</span>
+         <span style="color: #4f97d7;">:html-link-use-abs-url</span> t
+         <span style="color: #4f97d7;">:with-toc</span>              nil
+         <span style="color: #4f97d7;">:exclude</span>               <span style="color: #2d9574;">".*"</span>
+         <span style="color: #4f97d7;">:include</span>               <span style="color: #67b11d;">(</span><span style="color: #2d9574;">"index.org"</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"org-notes"</span>
+         <span style="color: #4f97d7;">:base-directory</span>        <span style="color: #2d9574;">"~/technical/"</span>
+          <span style="color: #4f97d7;">:base-extension</span>       <span style="color: #2d9574;">"org"</span>
+          <span style="color: #4f97d7;">:publishing-directory</span> ,<span style="color: #67b11d;">(</span>concat org-mode-publishing-directory <span style="color: #2d9574;">"/notes/"</span><span style="color: #67b11d;">)</span>
+          <span style="color: #4f97d7;">:recursive</span>            t
+          <span style="color: #4f97d7;">:publishing-function</span>  org-html-publish-to-html
+          <span style="color: #4f97d7;">:headline-levels</span>      <span style="color: #a45bad;">4</span>             <span style="color: #2aa1ae; background-color: #292e34;">; </span><span style="color: #2aa1ae; background-color: #292e34;">Just the default for this project.</span>
+          <span style="color: #4f97d7;">:auto-preamble</span>        t
+          <span style="color: #4f97d7;">:auto-sitemap</span>         t             <span style="color: #2aa1ae; background-color: #292e34;">; </span><span style="color: #2aa1ae; background-color: #292e34;">Generate sitemap.org automagically...</span>
+          <span style="color: #4f97d7;">:makeindex</span>            t
+          <span style="color: #4f97d7;">:section-numbers</span>      nil
+          <span style="color: #4f97d7;">:table-of-contents</span>    nil
+          <span style="color: #4f97d7;">:with-author</span>          nil
+          <span style="color: #4f97d7;">:with-creator</span>         nil
+          <span style="color: #4f97d7;">:with-tags</span>            nil
+          <span style="color: #4f97d7;">:style</span>                <span style="color: #2d9574;">"&lt;link rel=\"stylesheet\" href=\"../css/styles.css\" type=\"text/css\"/&gt; &lt;script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js\" type=\"text/javascript\"&gt;&lt;/script&gt; &lt;link href=\"http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css\" type=\"text/css\" rel=\"stylesheet\" /&gt;    &lt;script src=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js\" type=\"text/javascript\"&gt;&lt;/script&gt; &lt;script =\"text/javascript\" src=\"js/magic.js\"&gt;&lt;/script&gt;"</span>
+        <span style="color: #2d9574;">)</span>
+
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"org-notes-static"</span>
+         <span style="color: #4f97d7;">:base-directory</span>       <span style="color: #2d9574;">"~/technical/"</span>
+         <span style="color: #4f97d7;">:base-extension</span>       <span style="color: #2d9574;">"css</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">js</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">png</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">jpg</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">gif</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">pdf</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">mp3</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">ogg</span><span style="color: #2d9574; font-weight: bold;">\\</span><span style="color: #2d9574; font-weight: bold;">|</span><span style="color: #2d9574;">swf"</span>
+         <span style="color: #4f97d7;">:publishing-directory</span> ,<span style="color: #67b11d;">(</span>concat org-mode-publishing-directory <span style="color: #2d9574;">"/other/"</span><span style="color: #67b11d;">)</span>
+         <span style="color: #4f97d7;">:recursive</span>            t
+         <span style="color: #4f97d7;">:publishing-function</span>  org-publish-attachment
+         <span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">org-mode-blog-preamble</span> <span style="color: #bc6ec5;">(</span>options<span style="color: #bc6ec5;">)</span>
+  <span style="color: #9f8766;">"The function that creates the preamble top section for the blog.</span>
+<span style="color: #9f8766;">OPTIONS contains the property list from the org-mode export."</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">let</span> <span style="color: #2d9574;">(</span><span style="color: #67b11d;">(</span>base-directory <span style="color: #b1951d;">(</span>plist-get options <span style="color: #4f97d7;">:base-directory</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">org-babel-with-temp-filebuffer</span> <span style="color: #67b11d;">(</span>expand-file-name <span style="color: #2d9574;">"top-bar.html"</span> base-directory<span style="color: #67b11d;">)</span> <span style="color: #67b11d;">(</span>buffer-string<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">org-mode-blog-postamble</span> <span style="color: #bc6ec5;">(</span>options<span style="color: #bc6ec5;">)</span>
+  <span style="color: #9f8766;">"The function that creates the postamble, or bottom section for the blog.</span>
+<span style="color: #9f8766;">OPTIONS contains the property list from the org-mode export."</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">let</span> <span style="color: #2d9574;">(</span><span style="color: #67b11d;">(</span>base-directory <span style="color: #b1951d;">(</span>plist-get options <span style="color: #4f97d7;">:base-directory</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">org-babel-with-temp-filebuffer</span> <span style="color: #67b11d;">(</span>expand-file-name <span style="color: #2d9574;">"bottom.html"</span> base-directory<span style="color: #67b11d;">)</span> <span style="color: #67b11d;">(</span>buffer-string<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defun</span> <span style="color: #bc6ec5; font-weight: bold;">org-mode-blog-prepare</span> <span style="color: #bc6ec5;">()</span>
+  <span style="color: #9f8766;">"`</span><span style="color: #a45bad;">index.org</span><span style="color: #9f8766;">' should always be exported so touch the file before publishing."</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">let*</span> <span style="color: #2d9574;">(</span><span style="color: #67b11d;">(</span>base-directory <span style="color: #b1951d;">(</span>plist-get project-plist <span style="color: #4f97d7;">:base-directory</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span>
+         <span style="color: #67b11d;">(</span>buffer <span style="color: #b1951d;">(</span>find-file-noselect <span style="color: #4f97d7;">(</span>expand-file-name <span style="color: #2d9574;">"index.org"</span> base-directory<span style="color: #4f97d7;">)</span> t<span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span><span style="color: #4f97d7; font-weight: bold;">with-current-buffer</span> buffer
+      <span style="color: #67b11d;">(</span>set-buffer-modified-p t<span style="color: #67b11d;">)</span>
+      <span style="color: #67b11d;">(</span>save-buffer <span style="color: #a45bad;">0</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+    <span style="color: #2d9574;">(</span>kill-buffer buffer<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org91e2e95" class="outline-2">
+<h2 id="org91e2e95">Technical Artifacts</h2>
+<div class="outline-text-2" id="text-org91e2e95">
+<p>
+Offer up the Elisp goodness to others:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">provide</span> '<span style="color: #a45bad;">init-blog</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+
+<p>
+Before you can build this on a new system, make sure that you put
+the cursor over any of these properties, and hit: <code>C-c C-c</code>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2014 Apr 13</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

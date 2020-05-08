@@ -1,0 +1,17 @@
+ Here you go in kannada  ಕನ್ನಡ, in telugu తెలుగు  in hindi हिन्दी in tamil தமில்
+Let us write some logo programs via clojure.
+=, b d= to add code bloc
+k
+#+BEGIN_SRC shell
+git clone https://github.com/cswaroop/clojure-turtle
+#+END_SRC
+
+or open the =project.cli= of clojure-turtle  =, ’= to start repl
+learn https://github.com/cswaroop/clojure-turtle
+
+#+BEGIN_SRC clojure  :result value
+(use 'clojure-turtle.core)
+(new-window {:size [300 480]})
+#+END_SRC
+
+

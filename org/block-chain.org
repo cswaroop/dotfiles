@@ -1,0 +1,68 @@
+* Physical Contracts
+#+begin_src clojure
+#{
+;; Contract Header
+::contractRefNo
+::traderName
+::dealType
+::counterPartyName
+::brokerName
+::incoTerm
+::incoTerm/Track
+::incoTerm/FAS
+::incoTerm/FCA
+::incoTerm/FOB
+::incoTerm/FOT
+::incoTerm/CFR
+::incoTerm/CFR-CY
+::incoTerm/CIF
+::incoTerm/CIP
+::incoTerm/CPT
+::incoTerm/DAF
+::incoTerm/DDP
+::incoTerm/DDU
+::incoTerm/DEQ
+::incoTerm/DES
+::incoTerm/EXW
+::incoTerm/INST
+::paymentTerms
+::paymentTerms/COD
+::paymentTerms/LC
+::paymentTerms/LC_SIGHT
+::paymentTerms/LCBL_60DAYS
+::paymentTerms/NCAD
+::paymentTerms/NCADO
+::paymentTerms/NCAP
+::paymentTerms/NCAI
+::paymentTerms/NCPR
+::paymentTerms/RPP
+::masterContract
+::contractIssueDate
+::operator
+::counterParty
+::counterPartyContractRefNo
+::brokerRefNo
+::brokerCommissionPercentage
+::freightTerms
+::contractQuantityUnit
+;; Contract Items
+::contractItem
+;; Contract Item Product
+::contractItemProduct
+::product
+::productCategory
+::productOrigin
+::productYear
+::productMonth
+::contractItemProfitCenter
+::contractItemStrategy
+;; Contract Item Quantity
+::itemQuantityType
+::itemQuantityType/Fixed
+::itemQuantityType/Range
+;; Contract Item Price
+;; Contract Item Payment Terms
+;; Contract Item Delivery
+;; Contract Item Other Conditions
+}  
+#+end_src

@@ -1,0 +1,34 @@
+#+TITLE: Kubernetes
+IBM's version of Kubernetes+Docker is called OpenShift. Ofcourse some extract bells & whistles to look like opensource PAAs platform
+
+Courses
+- https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/learn
+- https://www.udemy.com/course/certified-kubernetes-application-developer/learn
+- 
+
+#+begin_src  shell
+kubectl version
+kubectl crd
+kubectl get pods --all-namespaces | grep sdn
+kubectl get pods --all-namespaces | grep monitoring
+kubectl create namespace stuff
+kubectl config set-context --current --namespace stuff
+
+oc project stuff
+kubectl get pods
+kubectl get all
+kubectl apply -f Deployment_live_ready.yaml
+kubectl get events
+cat Deployment_live_ready.yaml
+kubectl exec --it myapp-face
+curl localhost:8080
+exit
+
+kubectl apply -f service.yaml
+kubectl aply -f ingress.yaml
+kubectl get ingress
+curl mystuff.app.sgcp.bur.dev
+kubectl edit deployment myapp
+
+
+#+end_src

@@ -1,0 +1,12 @@
+#+TITLE: EMACS hybrid mode
+
+emacs editing style is global where as VI editing style is multi-model.
+Multimodel editing (based on the states, edit/movment/visual) is more economical
+and nice thing about emacs hybrid style is it gets you going with minimal
+frustration of any unlearning of emacs .
+
+Remember:
+=ctrl-z puts you into emacs when you are frustrated (notice the Blue color)=
+Lets get started with VI movement (Bill Joy vs. Richard Stallman)
+http://derekwyatt.org/vim/tutorials/
+https://pragprog.com/book/dnvim2/practical-vim-second-edition

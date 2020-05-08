@@ -1,0 +1,749 @@
+* On BHIM network
+** Banks
+| Sr. No. | Live Banks                                               | Live on BHIM | Live on BillPay |   |
+|       1 | AU Small Finance Bank                                    | ✓            |                 |   |
+|       2 | Abhyudaya Co-op Bank                                     | ✓            |                 |   |
+|       3 | Adarsh Co-operative Bank Ltd                             | ✓            |                 |   |
+|       4 | Ahmedabad Mercanatile Co-op Bank                         | ✓            |                 |   |
+|       5 | Airtel Payments Bank                                     | ✓            |                 |   |
+|       6 | Allahabad Bank                                           | ✓            | ✓               |   |
+|       7 | Andhra Bank                                              | ✓            | ✓               |   |
+|       8 | Andhra Pragathi Grameena Bank                            | ✓            |                 |   |
+|       9 | Andhra Pragathi Grameena Vikas Bank                      | ✓            |                 |   |
+|      10 | Apna Sahakari Bank                                       | ✓            |                 |   |
+|      11 | Assam Gramin Vikas Bank                                  | ✓            |                 |   |
+|      12 | Axis Bank                                                | ✓            | ✓               |   |
+|      13 | Bandhan Bank                                             | ✓            |                 |   |
+|      14 | Bank Of Baroda                                           | ✓            | ✓               |   |
+|      15 | Bank Of India                                            | ✓            | ✓               |   |
+|      16 | Bank of Maharashtra                                      | ✓            |                 |   |
+|      17 | Baroda Gujarat Gramin Bank                               | ✓            |                 |   |
+|      18 | Baroda Rajasthan Kshetriya Gramin Bank                   | ✓            |                 |   |
+|      19 | Baroda Uttar Pradesh Gramin Bank                         | ✓            |                 |   |
+|      20 | Bassein Catholic Coop Bank                               | ✓            |                 |   |
+|      21 | Canara Bank                                              | ✓            | ✓               |   |
+|      22 | Catholic Syrian Bank                                     | ✓            | ✓               |   |
+|      23 | Central Bank of india                                    | ✓            | ✓               |   |
+|      24 | Chaitanya Godavari Grameena Bank                         | ✓            |                 |   |
+|      25 | Chhattisgarh Rajya Gramin Bank                           | ✓            |                 |   |
+|      26 | Citibank                                                 | ✓            |                 |   |
+|      27 | City Union Bank                                          | ✓            | ✓               |   |
+|      28 | Corporation Bank                                         | ✓            | ✓               |   |
+|      29 | DBS Digi Bank                                            | ✓            |                 |   |
+|      30 | DCB Bank                                                 | ✓            |                 |   |
+|      31 | Dena Bank                                                | ✓            |                 |   |
+|      32 | Dena Gujarat Gramin Bank                                 | ✓            |                 |   |
+|      33 | Dhanalaxmi Bank                                          | ✓            |                 |   |
+|      34 | Dombivali Nagrik Sahakari Bank                           | ✓            | ✓               |   |
+|      35 | ESAF Small Finance Bank                                  | ✓            |                 |   |
+|      36 | Equitas Small Finance Bank                               | ✓            | ✓               |   |
+|      37 | FINO Payments Bank                                       | ✓            |                 |   |
+|      38 | Federal Bank                                             | ✓            | ✓               |   |
+|      39 | Fincare Small Finance Bank                               | ✓            |                 |   |
+|      40 | G P Parsik Bank                                          | ✓            | ✓               |   |
+|      41 | HDFC                                                     | ✓            | ✓               |   |
+|      42 | HSBC                                                     | ✓            |                 |   |
+|      43 | Hutatma Sahakari Bank Ltd                                | ✓            |                 |   |
+|      44 | ICICI Bank                                               | ✓            | ✓               |   |
+|      45 | IDBI Bank                                                | ✓            | ✓               |   |
+|      46 | IDFC                                                     | ✓            |                 |   |
+|      47 | Indian Bank                                              | ✓            |                 |   |
+|      48 | Indian Overseas Bank                                     | ✓            | ✓               |   |
+|      49 | IndusInd Bank                                            | ✓            | ✓               |   |
+|      50 | J & K Grameen Bank                                       | ✓            |                 |   |
+|      51 | Jalgaon Janata Sahkari Bank                              | ✓            |                 |   |
+|      52 | Jammu & Kashmir Bank                                     | ✓            |                 |   |
+|      53 | Janta Sahakari Bank Pune                                 | ✓            |                 |   |
+|      54 | Janta Sahakari Bank Pune                                 | ✓            | ✓               |   |
+|      55 | Kallappanna Awade Ichalkaranji Janata Sahakari Bank Ltd. | ✓            |                 |   |
+|      56 | Karnataka Bank                                           | ✓            |                 |   |
+|      57 | Karnataka Gramin Bank                                    | ✓            |                 |   |
+|      58 | Karnataka vikas Gramin Bank                              | ✓            |                 |   |
+|      59 | Karur Vysaya Bank                                        | ✓            |                 |   |
+|      60 | Kerala Gramin Bank                                       | ✓            |                 |   |
+|      61 | Kotak Mahindra Bank                                      | ✓            | ✓               |   |
+|      62 | Maharashtra Gramin Bank                                  | ✓            |                 |   |
+|      63 | Maharashtra State co-operative Bank                      | ✓            |                 |   |
+|      64 | Malad Sahakari Bank                                      | ✓            |                 |   |
+|      65 | Manipur Rural Bank                                       | ✓            |                 |   |
+|      66 | Maratha Co-oprative Bank Ltd                             | ✓            |                 |   |
+|      67 | Meghalaya Rural Bank                                     | ✓            |                 |   |
+|      68 | Mizoram Rural Bank                                       | ✓            |                 |   |
+|      69 | NKGSB                                                    | ✓            |                 |   |
+|      70 | Nanital Bank Ltd                                         | ✓            |                 |   |
+|      71 | Oriental Bank of Commerce                                | ✓            |                 |   |
+|      72 | Paschim Banga Gramin Bank                                | ✓            |                 |   |
+|      73 | Paytm Payments Bank                                      | ✓            |                 |   |
+|      74 | Pragathi Krishna Gramin Bank                             | ✓            |                 |   |
+|      75 | Prathama Bank                                            | ✓            |                 |   |
+|      76 | Punjab National Bank                                     | ✓            |                 |   |
+|      77 | Punjab and Maharastra Co. bank                           | ✓            | ✓               |   |
+|      78 | Punjab and Sind Bank                                     | ✓            | ✓               |   |
+|      79 | Purvanchal gramin Bank                                   | ✓            |                 |   |
+|      80 | Rajasthan Marudhara Gramin Bank                          | ✓            |                 |   |
+|      81 | Rajkot Nagari Sahakari Bank Ltd                          | ✓            |                 |   |
+|      82 | Samruddhi Co-op bank ltd                                 | ✓            |                 |   |
+|      83 | Sarva Haryana Gramin Bank                                | ✓            |                 |   |
+|      84 | Saurashtra Gramin Bank                                   | ✓            |                 |   |
+|      85 | Shree Kadi Nagarik Sahakari Bank Ltd                     | ✓            |                 |   |
+|      86 | South Indian Bank                                        | ✓            |                 |   |
+|      87 | Standard Chartered                                       | ✓            | ✓               |   |
+|      88 | State Bank Of India                                      | ✓            | ✓               |   |
+|      89 | Suco Souharda Sahakari Bank Ltd                          | ✓            |                 |   |
+|      90 | Surat People Cooperative Bank                            | ✓            |                 |   |
+|      91 | Suryoday Small Finance Bank Ltd                          | ✓            |                 |   |
+|      92 | Syndicate Bank                                           | ✓            | ✓               |   |
+|      93 | Tamilnad Mercantile Bank                                 | ✓            |                 |   |
+|      94 | Telangana Grameena Bank                                  | ✓            |                 |   |
+|      95 | Thane Bharat Sahakari Bank                               | ✓            |                 |   |
+|      96 | The Cosmos Co-Operative Bank LTD                         | ✓            |                 |   |
+|      97 | The Ahmedabad District Coop bank                         | ✓            |                 |   |
+|      98 | The Baroda Central Co-op Bank Ltd                        | ✓            |                 |   |
+|      99 | The Gujarat State Co-operative Bank Limited              | ✓            |                 |   |
+|     100 | The Hasti Co-operative Bank Ltd                          | ✓            |                 |   |
+|     101 | The Kalyan Janta Sahkari Bank                            | ✓            |                 |   |
+|     102 | The Lakshmi Vilas Bank Limited                           | ✓            | ✓               |   |
+|     103 | The Mahanagar Co-Op. Bank Ltd                            | ✓            |                 |   |
+|     104 | The Mehsana Urban Co-Operative Bank                      | ✓            |                 |   |
+|     105 | The Ratnakar Bank Limited                                | ✓            |                 |   |
+|     106 | The SVC Co-Operative Bank Ltd                            | ✓            |                 |   |
+|     107 | The Saraswat Co-Operative Bank                           | ✓            | ✓               |   |
+|     108 | The Sutex Co-op Bank                                     | ✓            |                 |   |
+|     109 | The Thane Janta Sahakari Bank Ltd(TJSB)                  | ✓            | ✓               |   |
+|     110 | The Udaipur Mahila Urban Co-op Bank Ltd                  | ✓            |                 |   |
+|     111 | The Urban Cooperative Bank Ltd Dharangaon                | ✓            |                 |   |
+|     112 | The Varanchha Co-op Bank Ltd                             | ✓            |                 |   |
+|     113 | The Vijaya Co-operative Bank Ltd, Ahmedabad              | ✓            |                 |   |
+|     114 | The Vishweshwar Sahakari Bank Ltd                        | ✓            |                 |   |
+|     115 | Tripura Gramin Bank                                      | ✓            |                 |   |
+|     116 | UCO Bank                                                 | ✓            | ✓               |   |
+|     117 | Udaipur Mahila Urban Co-op Bank Ltd                      | ✓            |                 |   |
+|     118 | Ujjivan Small Finance Bank                               | ✓            |                 |   |
+|     119 | Union Bank of India                                      | ✓            |                 |   |
+|     120 | United Bank of India                                     | ✓            | ✓               |   |
+|     121 | Uttarakhand Gramin Bank                                  | ✓            |                 |   |
+|     122 | Vananchal Gramin Bank                                    | ✓            |                 |   |
+|     123 | Vasai Vikas Co-op Bank Ltd                               | ✓            |                 |   |
+|     124 | Vijaya Bank                                              | ✓            |                 |   |
+|     125 | Yes Bank                                                 | ✓            | ✓               |   |
+** Merchants
+
+Online Shopping	
+
+1 MG
+99acres.com
+Ad victoriam ventures pvt ltd (Stalkbuylove)
+Aditya Birla Fashion and Retail Ltd.(Peter England)
+Aero Club (Woodland India)
+AICTE
+Allen Solly
+Amazon India
+amkette.in
+Amnesty India
+Ampere Vehicles
+Amul Online
+Amway
+Anhadonline
+Apollo Hospitals Enterprises Ltd
+Archiesonline.com
+Aromathai.net
+azafashions.com
+Bagzone Lifestyle
+Bajaj Digital
+Bargainklick
+Bata Shoes
+Beardo
+Benzer Shoes
+BeU Salon
+Bharat Matrimony
+Biba.in
+Big Small
+Bigrock.com
+Bigstylist.com
+Billexo Payments
+Blue Terra
+Bombayshavingcompany
+Boodmo.com
+Bookmybai.com
+Boutique Living India
+Boxboy.com
+Brainbees Solutions Pvt Ltd ( Firstcry.com )
+Brainchecker.in
+Brownie Point
+Browntree.com
+Buildkar.com
+Burgundy Box
+Business Gifts
+c2sonline.com
+Cakeanytime.com
+Cambridge Apparels
+Career Launcher
+Careindia.com
+Casio India
+Central Cottage Industries Corp
+Charak Pharma Pvt. Ltd.
+charminglabel.com
+Chinmaya Mission
+Chintamani Jewellers
+Chunmun.in
+Clickoncare
+CM Relief Fund(Maharashtra)
+Coho.in
+Concept Hospitality(Fern Hotels)
+Condombazaar.com
+Cotton World
+Crossword
+Cryoviva
+Cycle Pure Agarbatti
+Ddecor
+Delhi Gymkhana Club
+Dentalkart
+Divya Yoga
+Docsapp
+Dr. Lal Pathlabs
+Duke India
+Dunkin Donuts
+Durian.com
+Duronto Footwear
+easyshopping4u.com
+ebay India
+e-constructionmart.com
+Elica
+Empire Hotel
+enthopia.com
+epoojastore.com
+Ethos Watches
+Eureka Forbes
+Euro Fashions
+Eventshigh.com
+excelcombine.com
+extramarks.com
+Faasos
+Fab India
+Fashionandyou.com
+Fashos.com
+Fitternity.com
+Flavorsofmycity.com
+Flipkart.com Â 
+Flowerscakesonline.com
+Forever New Apparels Pvt Ltd
+Fugazee
+Fundsindia.com
+Furnspace
+Ganpatipule
+Garvigurjari.com
+Gemsnpearls.com
+genzee.in
+Getgrowfit
+Gini n Jony
+Giskaa
+Gitanjali Jewels
+gkboptical.com
+Goevents.com
+Gofro
+Gold's Gym
+gourmetdelight.in
+Gozefo
+Grofers
+H&R Block
+Hakoba
+Haldiram Products Private Limited
+happilyunmarried.com
+haymarketindia.in
+Healthifyme.com
+Healthmug
+Helpage india
+Helpbooks.in
+Hettich
+Hidesign
+Housefull.com
+I2I Funding
+IFB Appliances
+Impact Guru
+Inc.in (India Congress)
+Indiagift
+Indiamart
+Indigo Seaways
+Infibeam.com Â 
+Innovative Retail Concepts Private Limited(Bigbasket)
+INV Home
+IshaÂ Foundation
+Iskcon Temple
+Iskcondesiretree
+Jabong
+Jaipur Gems
+Jashn (MSH Sarees Pvt Ltd)
+Jewelsouk.com
+Jockey India
+Jos Alukkas
+Jugad Pay
+Just Herbs
+justdial.com
+KAARYAH
+Kalanjali
+Kalnirnay
+Kaya Skin Clinic Ltd.
+Kent RO
+Khadi Natural
+Khadims Pvt Ltd
+Khandige Organic Health Products
+Kronokare
+Latin Quarters
+Legaldesk
+lespetits.in
+Lightandyou
+Littleapp.com
+Livpure
+Louis Philippe
+Lulu Webstore
+Mahaonline
+Maharashtra State Road Transport Corporation
+Maharishi Ayurveda
+Major Brands India Pvt Ltd
+Malabar Gold & Diamonds
+Mamaearth.com
+Manayavar
+Mandirabedi Designs
+Mazagon Dock Shipbuilders Limited
+mchemist.com
+Mciindia.org
+Medicalbulkbuy.com
+Medplusmart.com
+Meesho
+Mera Events.com
+Metro Shoes
+Mi.com
+milagrowhumantech.com
+Milkbasket
+millionlights.org
+Miraj Online Store
+Mojarto
+Monster India
+Motomojo
+Mountain Valley Springs India Pvt Ltd(Forest Essentials)
+MTR Foods
+Mumbai Traffic Police
+My PoojaBox.com
+Myborosil.com
+Myntra.com
+Mypoolin
+Naaptol
+Nalli sarees
+Nanavati Hospital
+Narayana Heath(Narayana Hrudayalaya)
+Naturalcart.in
+Naukri.com
+Neerus Ethnic
+Netmeds.com
+Newu.in
+newwomanindia.com
+Nexa
+Nine Dot Nine Interactive Private Limited (digitshop.com)
+Nirlep Appliances Ltd
+niveza.in
+Nuayurveda.com
+Nyassa
+NYKAA.com
+Off Recharge
+Oksir
+onlinecakebhejo.com
+Onlineprasad.com
+orgtree.in
+Orra Fine Jewels
+Outdoor Travel & Sports Gear Pvt Ltd
+Overdrive (eshop.infomedia18.in)
+Oxfam
+Oxymoney
+P N Gadgil Jewellers
+Papa Johns
+Patanjali
+Pawan Hans Ltd.
+Peachmode
+Peopleonline
+PETA India
+PitaPit
+Pizza Hut India
+Place of Origin
+Planet Fashion
+Pluss.in
+Poorvika Mobiles
+Pothys
+Powerhouse Fitness and Realty Limited
+Prime Minister Relief Fund
+Pronatureorganic
+purelyherbs.in
+Pureweave
+Quick Heal
+Quickride
+Rail Rider
+Rajasthan Payment Platform
+Ramoji Film City
+Rediff.com
+Reebok India
+Releasemyad
+Resonance Eduventures Limited(edushoppee.com)
+Rotary Club
+safomasi.com
+Salebhai
+Samsung.com
+saranam.com
+Sastasundar
+Shaadi.com
+Shanaz Hussain
+Shop Lenevo
+Shop101.com
+Shopclues.com
+Shri Badrinath-Kedarnath Temple
+Shuddhi.org
+Skorydov Systems Private Limited(GST Plus)
+Skybags
+Snackible
+soulflower
+Spectra Motors
+Spicebox
+Sportsgeo
+Springwel Mattresses Pvt Ltd
+Spykar
+Sri Sri Tattva Ayurveda
+Stayuncle.com
+Stylecracker
+Sun Umbrella Pvt Ltd
+Sunday Rest
+Sweet Chariot Cafe
+Syska Accessories
+Taj Hotels
+Taj Mahal Tea House
+talentedge.in
+Tata Starbucks
+Tata Swach
+Teamonkglobal.com
+Teamteas.com
+Telebrands India Pvt Ltd(HBN India)
+The Arena
+The Byke Hospitality Ltd
+The Handcrafts & Handloom Exports Corp
+The Hindu Group
+The Living Room
+The Man Company
+The MobileStore Services Limited
+Thejodilife
+Thyrocare
+Ticketnew
+Tirumala Tirupati Devasthanams
+Titan Group
+Toppr
+Travelguru.com
+turmsname
+TVC Skyshop
+Uniconnect
+unnatihelpers.com
+Urbanladder.com
+Vanheusen India
+Vastu Store
+vervemagazine.in9(The Indian and Eastern Engineer Company Pvt Ltd)
+Via.com
+Vijay Sales
+VIP Industries Ltd(VIP Bags)
+Vismay
+Vistaprint.in
+VLCC Health Care Ltd
+Volercar
+Waghbakri(buytea.com)
+Welling
+Weston.co.in
+Wholesalebazaar.biz
+Wildcraft
+William Penn Pvt. Ltd.
+Wills Lifestyle
+winni.in
+WishandBuy
+wodarmour
+Woman's era(indiamags.com)
+Wonderchef Home Appliances Pvt Ltd.
+Wonderla Holidays Limited
+Woodenstreet.com
+woohoo.com
+www.buildersmart.in
+Wydr
+Xtra Recharge
+Yatra.com
+YepmeShopping.com
+yesno.in
+YFC
+Youtoocanrun.com
+Zara (Inditex Trent Retail Pvt Ltd)
+Zoopindia.com
+
+Tours and Travels	
+
+Abhibus
+ABN Holidays
+Airticketsinida.com
+Akbar Travels of India
+Apstsbus
+Chartered Bus
+Cheapticket.in
+Cleartrip Pvt. Ltd
+Confirmtkt
+Cox & Kings
+E Travel smart.com
+easemytrip.com
+Goa Tourism
+Goibibo
+Goomo.com
+Himachal Pradesh Tourism Development Corp Ltd
+India-tourism.net
+Irctc.co.in Â 
+Jet Airways
+Justickets Private Limited
+MakeMyTrip.com Â 
+Odisha Tourism
+Ola
+Orchid Hotels
+Oyo Rooms
+Pearl International Tours and Travels Limited(Sastiticket.com)
+Prime Trip
+Railyatri
+Rajasthan Tourism
+Redbus.in Â 
+Roots Corporation(Ginger Hotels)
+Sastiticket.com
+Spicejet.com Â 
+Sterling Holidays
+Telangana Tourism Development Corporation
+TravelMasti.com
+Travelspice.com
+TUI India
+Uaeexchangetravel.com
+Uber
+Uttar Pradesh State Road Transport Corporation
+Wonderla Holidays Limited
+
+Entertainment	
+
+Adlabs Imagica
+Bookmyshow
+Della Adventures
+Esselworld
+Kidzania(IMAGINATION EDUTAINMENT INDIA PRIVATE LIMITED)
+PVR Cinemas
+Ticket Goose
+TPV Multiplex
+
+Telecom	
+
+Aircel
+Bharti Airtel Limited
+Idea Cellular Ltd
+Mahanagar Telephone Nigam Ltd
+Reliance Communications Ltd
+Reliance JIO
+Tata Docomo
+Vodafone India
+
+Utilities	
+
+Ajmer Vidhyut vitran Nigam
+ALLAHABAD NAGAR NIGAM
+Andhra Pradesh Eastern Power Distribution Company
+Andhra Pradesh Southern Power Disribution Company Ltd
+BSES Rajdhani Power Limited
+BSES Yamuna Power Ltd.
+Calcutta Electricity Supply Company Ltd.Â 
+Central UP Gas
+Chhattisgarh State Power Distribution Company Ltd.
+Chhindwara Municipal Corporation
+Dakshinanchal Vidyut Vitran Nigam Ltd.Â 
+Daman & Diu Electricity Board
+Ghaziabad Nagar Nigam
+Gujarat Gas Company Limited
+Gulbarga Electricity Supply Company Ltd.
+Himachal Pradesh State Electricity Board
+Hubli Electricity Supply Company Ltd.
+Jaipur Vidyut Vitran Nigam Ltd.
+Jhansi Nagar Nigam
+Jodhpur Vidyut Vitran Nigam Ltd.
+M.P.Madhya Kshetra Vidyut Vitran Co.
+Madhyanchal Vidyut Vitran Nigam Ltd.Â 
+Maharashtra Natural Gas Limited
+Mangalore Electricity Supply Company Ltd.
+MP Paschim Kshetra Vidyut Vitaran Co Ltd
+MSEDCL
+Municipal Corporation of Faridabad
+Nagar Nigam Agra
+Nagar Nigam Varanasi
+New Delhi Municipal Corporation
+Paschimanchal Vidyut Vitran Nigam Ltd
+Pune Municipal Corporation
+Purvanchal Vidyut Vitran Nigam Ltd.Â 
+Ranchi Municipal Corporation
+Reliance Energy
+Sabarmati Gas Company Ltd
+South Bihar Power Distribution
+Tata Power - Mumbai
+Telangana Southern Power Distribution Company Limited
+Uttar Pradesh Power Corporation Ltd.
+Vadodara Gas Ltd
+Vapi Nagarpalika
+
+NBFC	
+
+Angel Broking
+Bajaj Finserv
+Fullerton India
+Hero FinCorp
+India Infoline
+Mahindra Home Finance
+Shriram Transport Finance Company Ltd
+
+Retail Outlets	
+
+AP Online
+Barista
+Bharat Diamond Bourse
+Cafe Coffee Day
+Cheeliza
+Chef bakers
+Cinepolis
+Decathlon
+Delhi Metro Rail Corporation
+Drounken Monkey
+Farmik
+Foodworld
+Future Group (Big Bazaar)
+Goli VadaPav
+Health & Glow
+Hotel Empire
+HPCL
+Infiniti Retail(Croma)
+Inox
+Iskcon Temple (Girgaon Chowpati,Miraroad)
+JRB Group (Swagath+Sagar Ratna)
+Jumbo King
+Kalyan Jewelers
+Ketto
+KFC
+M K Retail
+Mad Over Donuts
+Mahanagar Gas
+McDonalds
+Metro Cash & Carry
+Mojo Pizza
+Oye Amritsar
+PC Jewellers
+Pizza Stop
+Puma Sports India Private Limited
+Rajasthan E mitra
+Reliance Retail
+Sangeetha Mobiles
+Speciality Restaurants
+Swiggy
+TTK Prestige
+Tupperware
+Uttar Pradesh Common Service Center
+Wellness Forever
+
+Insurance & Mutual Funds	
+
+Aegon Life Insurance Company Ltd
+Apollo Munich Health Insurance Co Ltd
+Aviva Life Insurance Company India Ltd
+Bajaj Allianz General Insurance Company Ltd
+Bajaj Allianz Life Insurance Co Ltd
+Bharti Axa General Insurance Co Ltd
+Bharti AXA Life Insurance Company Ltd
+Birla Sun Life Insurance Company Ltd
+Canara HSBC Oriental Bank of Commerce Life Insurance Company Ltd
+Cholamandalam MS General Insurance Company Ltd
+DHFL Pramerica Life Insurance Company Ltd
+Exide Life Insurance Company Ltd
+Future Generali India Insurance Co Ltd
+Future Generali India Life Insurance Co Ltd
+HDFC Ergo General Insurance Co Ltd
+HDFC Life Insurance Company Ltd
+ICICI Lombard General Insurance Co. Ltd
+ICICI Prudential Life Insurance Company Ltd
+IDBI Federal Life Insurance Co Ltd
+IFFCO Tokio General Insurance Company Ltd
+IndiaFirst Life Insurance Company Ltd
+Kotak Mahindra Old Mutual Life Insurance Ltd
+Liberty Videocon General Insurance Co Ltd
+Life Insurance Corporation Of India
+Max Life Insurance Company Ltd
+National Insurance Company Ltd
+Oriental Insurance Company Ltd
+PNB MetLife India Insurance Company Ltd
+Reliance General Insurance Company Ltd ( ADAG )
+Reliance Life Insurance Company Ltd (ADAG)
+Religare Health Insurance Company Ltd
+Royal Sundaram Insurance Company Ltd
+SBI Life Insurance Company Ltd
+Shriram Life Insurance Company Ltd
+Star Health and Allied Insurance Company Ltd
+Star Union Dai-ichi Life Insurance Company Ltd
+Tata AIA Life Insurance Company Ltd
+Tata AIG General Insurance Company Ltd
+The New India Assurance Company Ltd
+Universal Sompo General Insurance Co Ltd
+
+Logistics	
+
+Aramex India
+Blue Dart Express Limited
+EKART
+FX Mart Private Limited
+
+Food & Beverage	
+
+Box8
+Charcoal Biryani
+Food Panda
+Holachef Hospitality Pvt. Ltd
+Inner chef
+
+Recharge	
+
+Cointab
+CU App
+Easymobilerecharge
+Ezee pay
+FastRecharge
+Finmo
+freecharge
+Itz Cash
+Justrechargeit
+Komparify
+niki.ai
+Pay2Cart
+Paynear
+rechargeitnow
+
+DTH	
+
+Dish TV
+dthconnect.com
+Hathway
+Reliance Big TV
+Tata Sky
+Videocon d2h
+
+Education	
+
+Dr. D.Y. Patil Vidyapeeth, Pune
+Easylrn
+IBS Mumbai
+IIT Bombay
+IIT Jodhpur
+IMTS Institute
+ITM UNIVERSITY GWALIOR
+LUCKNOW UNIVERSITY
+Maharashtra State Dental Council
+MT Educare(Robomate Plus)
+myprivatetutor.com
+Onfees.com
+Rao Edusolutions Pvt. Ltd (Rao IIT Academy)
+Sheth Publishing House
+Think & Learn Pvt Ltd ( Byjus)
+YMT college of Management (Kharghar)
+
+

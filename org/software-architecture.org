@@ -1,0 +1,11 @@
+#+TITLE:  Software Architecture Case Studies
+https://www.udemy.com/course/software-architecture-case-studies/
+
+Author
+
+Memi Lavi
+Senior Software Architect & Consultant
+Senior Software Architect with more than 20 years of experience in the Software Industry.
+Worked with all kinds of clients - govt. entities, start-ups, banks, telcos and more - designing the architecture of their systems and working closely with the development teams.
+Frequent speaker in many tech conferences & meetups, and a real software enthusiast.
+

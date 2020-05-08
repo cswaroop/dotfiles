@@ -1,0 +1,10 @@
+#+TITLE: How to build a SaaS product
+#+TITLE: What SaaS product to build?
+https://medium.com/datadriveninvestor/how-to-build-a-saas-product-step-by-step-58e776c5d195
+* Courses
+https://www.udemy.com/topic/saas/
+https://www.udemy.com/course/the-build-a-saas-app-with-flask-course/learn
+https://www.udemy.com/course/architect-saas-applications-unique-challenges-solutions/learn
+* Things to take care of while building a SaaS product
+** Start with MVP
+** 

@@ -1,0 +1,13 @@
+#+TITLE: Tally Software
+* Languages
+- Bahasa Indonesia
+- Bahasa Melayu
+- Bengali
+- Gujarati
+- Hindi
+- Punjabi
+- Marathi
+- Kannda
+- Malayalam
+- Tamil
+- Telugu

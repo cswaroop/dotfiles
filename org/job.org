@@ -1,0 +1,8 @@
+
+* 2020
+** 2020-04 April
+*** 2020-04-26 Sunday
+**** Golang Developer 
+   Entered on [2020-04-26 Sun 09:01]
+  
+     [[file:~/.spacemacs::("j" "Job" entry (file+datetree "D:/MyProjects/personal/job.org")]]

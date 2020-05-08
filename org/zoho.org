@@ -1,0 +1,85 @@
+#+TITLE: [[https://www.zoho.com/][ZOHO]]
+
+Backoffice application suite (SaaS)
+
+- [[https://crm.zoho.com/][CRM]] :: For Sales, Customer Relationship Mangement
+  - ContactManagement
+  - Commerce
+  - Social
+  - SalesIQ
+  - Motivator
+- [[https://campaigns.zoho.com/][Campaigns]] :: For Marketing  and Customer Engagement
+  - Marketing Hub
+  - Survey
+  - Social
+  - Sites
+  - Forms
+- [[https://desk.zoho.com/][Desk]] :: For IT helping customers, employees (agents)
+  - Mobile Device Management
+  - Assist remote computer management
+  - Site24x7
+  - Lens
+- [[https://people.zoho.com/people/][People]] :: For HR to simplify HR process and engaging employees
+  - Workerly
+  - Recruit
+- [[https://books.zoho.com/][Books]] :: For Finance Accounting  & Invoice
+  - Subscritpions
+  - Inventory
+  - Invoice
+  - Expense
+  - Checkout
+- [[https://projects.zoho.com/][Projects]] :: For Project Mangaement of IT and Businss
+- [[https://creator.zoho.com/][Creator]] :: Build Custom Apps to automate your businss process
+  - Analtics :: for BI
+  - Flow :: for Integration
+- Mail :: Email and Collaboration
+* [[https://www.zoho.com/crm/developer/docs/api/][ZOHO CRM API]]
+Write the text of the document and use , b d to add a code block, selecting clojure as the language.
+C-c C-c to evaluate the code block at the cursor point. The result is pasted underneath the code block.
+- Lead
+- Contact
+- Account
+- Deal
+- Product
+- Quote
+- Sales Order
+- Purchase Order
+- Invoice
+- Campaign
+- Vendor
+- Price Book
+- Case
+- Solution
+- Task
+- Event
+- Call
+- Reports
+
+:ClientId:
+1000.RXIYIIZAP4UISL3NIRXDQ0SXXLS7EH
+:ClientSecret:
+faaba31caba9f36368988e74000c29216f5e6765aa
+:Scope:
+ZohoCRM.users.ALL,ZohoCRM.modules.ALL
+:token:
+1000.0f3186d60b2eefc3c4e26a4af10c2214.1ee488830f4f75c5c235bdf463dffcc8
+(setq org-babel-sh-command "cmd /k")
+#+BEGIN_SRC shell :results value
+curl  -d "grant_type=authorization_code&clientid=1000.RXIYIIZAP4UISL3NIRXDQ0SXXLS7EH&client_secret=faaba31caba9f36368988e74000c29216f5e6765aa&code=1000.0f3186d60b2eefc3c4e26a4af10c2214.1ee488830f4f75c5c235bdf463dffcc8“  "https://accounts.zoho.in/oauth/v2/token"
+echo
+#+END_SRC
+
+#+RESULTS:
+* [[https://www.zoho.com/campaigns/help/developers/][ZOHO Campaign API]]
+- Contacts
+- Campaign
+- Automation
+- Ecommerce
+- Library
+- Reports
+* [[https://desk.zoho.com/DeskAPIDocument][Zoho Desk API]]
+* [[https://www.zoho.com/people/help/api/overview.html][ZOHO People API]]
+* [[https://www.zoho.com/books/api/v3/][ZOHO Books Api]]
+* [[https://www.zoho.com/projects/help/rest-api/zohoprojectsapi.html][Zoho Projects API]]
+* [[https://www.zoho.com/creator/help/api/rest-api/zoho-creator-rest-api.html][ZOHO Creator API]]
+  

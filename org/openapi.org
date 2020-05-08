@@ -1,0 +1,6 @@
+#+TITLE: OpenAPI
+
+OpenAPI a.k.a Swagger
+
+* References
+https://www.udemy.com/course/learn-swagger-and-the-open-api-specification/

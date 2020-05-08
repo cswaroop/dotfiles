@@ -1,0 +1,75 @@
+
+* 2020
+** 2020-04 April
+*** 2020-04-30 Thursday
+*** Deehat :agrotech:
+    https://agrevolution.in/
+   Entered on [2020-04-30 Thu 22:09]
+** 2020-05 May
+*** 2020-05-01 Friday
+**** Lending Kart 
+     :fintech:lending:
+   Entered on [2020-05-01 Fri 00:11]
+*** 2020-05-02 Saturday
+**** Navi Technologies
+     :sachinbansal:fintech:
+     https://www.navi.com/
+********* SDET
+    What we are looking for :
+    7+ years of overall QA experience with atleast 1 year in a Lead role.
+    Experience of creating test frameworks and strategy, analyze (through exploratory testing) and report test results to project team in a CI/CD environment
+    Setting up, maintaining, and performing test automation frameworks on multiple application platforms, such as Mobile, Api, and Web, and building test scenarios and acceptance tests
+    Good in Object oriented programming
+    Good command over programming language like Java/Kotlin
+    Experience in scripting language like Python/JavaScript/Ruby
+    Experience testing microservices architecture.
+    Functional back-end database testing using SQL..
+    Experience with automation frameworks like Selenium, Appium, RestAssured etc.
+    Good command over version control tools like GIT
+    Ability to work in an Agile environment with highly iterative development cycles.
+
+    Nice To have  :
+    Experience in Tools: Kibana, Kubernetes, GoCD
+    Experience and knowledge in the Financial Services domain would be a plus.
+****** ML Engineer
+We are looking for a candidate with :
+A good understanding of machine learning techniques and demonstrable experience applying them to solve problems using machine learning libraries such as scikit-learn, scipy, etc.
+A strong engineering background working with good knowledge of at least one programming language (Python, Java, Scala, etc) as well as engineering standard methodologies.
+Experience writing SQL queries and handling large amounts of data.
+Experience bringing models in production.
+Industry experience creating and productionizing machine learning algorithms at scale (e.g., production use of AWS ecosystem, data bricks and Open-source model deployment tools like Mleap, MLib etc..) 
+Experience setting monitoring (e.g. Grafana, Data Dog) and alert notifications (e.g. Pager Duty), etc.
+Experience building large-scale batch and real-time data pipelines with open source data processing frameworks like Spark or Storm.
+Experience with Tensorflow or MXNET
+Fluent in English with excellent written and oral communication skills.
+Experience with platforms for programmatically authoring, scheduling and monitoring workflows (e.g. Apache Airflow).
+****** Android Developer
+Responsibilities
+Work on the development of the Android app for our first product
+Write clean, well-tested code
+Optimise app performance using real profiling data
+Requirements
+3+ years of software development experience
+Strong computer science fundamentals
+Deep knowledge of Java and Android SDKs, familiarity with Kotlin
+Can write code that is readable, maintainable and testable
+Know the importance of tests and how to approach writing different types of tests
+Bonus
+Know how to use test driven development as a design tool
+Seek to identify key underlying ideas and use those as building blocks before reaching for shiny new tools
+Entered on [2020-05-02 Sat 10:40]
+*** 2020-05-05 Tuesday
+**** Finastra
+     :fintech:
+     https://www.finastra.com/
+   Entered on [2020-05-05 Tue 18:24]
+  
+     [[file:d:/MyProjects/personal/sakai.org]]
+*** 2020-05-07 Thursday
+**** 
+   Entered on [2020-05-07 Thu 18:41]
+  
+     [[file:d:/Projects/howardabrams-dotfiles/emacs-emms.org::*Technical Artifacts][Technical Artifacts]]
+** 
+
+** 

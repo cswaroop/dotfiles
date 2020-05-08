@@ -1,0 +1,10 @@
+Every software development has these
+- Design
+- Develop
+- Deploy
+
+Every customer development has these
+
+- MVP validation
+- If it is a consumer software/SaaS, you need growth hacking.  Even opensource software adoption also requires growth hacking. 
+
